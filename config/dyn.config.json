@@ -1,0 +1,23 @@
+{
+  "meta" :  {
+      "siteMeta" : {
+        "title": "Penpals",
+        "desc": "Penpals",
+        "tags": "Pen, pals"
+      },
+      "domain"  : "penpals",
+      "subFol"  : "",
+      "https"   : false
+    },
+  "sys_config"  : {
+    "currTheme" : "ambiguity",
+    "user_plugin" : "clay_account"
+  },
+  "db_conf"     : {
+    "host"  :   "localhost",
+    "user"  :   "root",
+    "password"  : "",
+    "database_name" : "penpals_db",
+    "timezone"  : "Asia/Kolkata"
+  }
+}
