@@ -1,6 +1,6 @@
 <?php
 $GLOBALS['themeVari'] = "cms";
-$GLOBALS['titleSub'] = $GLOBALS['siteMeta']['desc'];
+$GLOBALS['titleSub'] = "Penpals";
 $GLOBALS['jsInclude'] = array("src/front/js/Home.js");
 $GLOBALS['printPage'] = function()
 {
