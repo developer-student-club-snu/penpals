@@ -51,7 +51,6 @@ die(
     '
     {
         "status" : "Logged in",
-        "User-id" : '$_SESSION["userId"]'
     }
     '
 );

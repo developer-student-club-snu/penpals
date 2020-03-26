@@ -22,9 +22,8 @@
 	$elem = explode('/', $path);
 
     
-    session_start();
     if(!empty($_SESSION["userId"])) {
-        require_once 'home.php';
+        require_once "frontend/home.php";
     } else {
         require_once  "frontend/login.php";
     }
