@@ -21,26 +21,14 @@
 	$path = ltrim($path1[0], '/');
 	$elem = explode('/', $path);
 
-	/*
-	* Getting the URL back together.
-	*/
-	$path = join("/", $elem);
-	if(strlen($path) == 0) {
-		$path = DocRoot . 'frontend' . DS . 'home.php';
-		include $path;
-	}
-	else
-	{
-		routeHandler::execRoute($_SERVER['REQUEST_URI']);
-		if (routeHandler::$routeFound == false) {
-			$path = DocRoot . 'frontend' . DS . $path . '.php';
-			if (!file_exists($path)) {
-				header("Location: " . __host . '404');
-			}
-			include $path;
-		}
-	}
-	$themePath = DocRoot .'themes' . DS . currTheme . DS . 'containers' . DS . $GLOBALS['themeVari'] . '.php' ;
+    
+    session_start();
+    if(!empty($_SESSION["userId"])) {
+        require_once 'home.php';
+    } else {
+        require_once  "frontend/login.php";
+    }
 
-	include $themePath;
+
+
 ?>

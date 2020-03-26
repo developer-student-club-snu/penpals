@@ -1,0 +1,41 @@
+body{
+    background-color: #465669;
+}
+
+.container{
+    width: 75%;
+	height: 80%;
+	background-color: white;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    margin: auto;
+    padding: 0px;
+}
+
+.chat_list{
+    background-color: #1a1a1a;
+    height: 100%;
+    padding: 0px;
+}
+
+.message_area{
+    background-color: #d9d9d9;
+    height: 100%;
+    padding: 0px;
+}
+.list_header{
+    background-color: #121212;
+    height:75px;
+}
+.list_header h1{
+    color: white;
+    margin: 0px;
+    font-family: Helvetica;
+}
+.list_header span{
+    background-color: black;
+
+}

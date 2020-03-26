@@ -11,6 +11,8 @@ die(
     '
 );
 
+session_start();
+
 $username = md5($_POST["username"]);
 $salt = md5(time() . (rand() * 1000));
 $pass = hash("sha256", $salt . $_POST["password"]);
@@ -34,7 +36,6 @@ $sql = 'INSERT INTO users (username, salt, password) VALUES ("' . $username .'",
 $conn->query($sql);
 
 $_SESSION["status"] = true;
-$_SESSION["loggedIn"] = 
 
 die(
     '
@@ -43,3 +44,5 @@ die(
     }
     '
 );
+
+header("Location: ./frontend/home.php");

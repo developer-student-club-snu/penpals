@@ -11,13 +11,15 @@ die(
     '
 );
 
+session_start();
+
 $username = md5($_POST["username"]);
 
 $sql1 = 'SELECT * FROM users where username="' . $username . '"';
 
 $res = $conn->query($sql1);
 
-if(mysqli_num_rows($res) >= 1)
+if(mysqli_num_rows($res) < 1)
 die(
     '
     {
@@ -48,7 +50,8 @@ $_SESSION["loggedIn"] = $res['id'];
 die(
     '
     {
-        "status" : "Logged in"
+        "status" : "Logged in",
+        "User-id" : '$_SESSION["userId"]'
     }
     '
 );
