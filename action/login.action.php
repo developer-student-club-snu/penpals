@@ -54,3 +54,5 @@ die(
     }
     '
 );
+
+require_once "index.php";

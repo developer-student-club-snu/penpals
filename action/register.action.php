@@ -45,4 +45,4 @@ die(
     '
 );
 
-header("Location: ./frontend/home.php");
+require_once "index.php";

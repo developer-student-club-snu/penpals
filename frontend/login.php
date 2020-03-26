@@ -12,18 +12,18 @@
             <div class="col-md-4 col-sm-1 col-xs-12"></div>
             <div class="col-md-4 col-sm-10 col-xs-12 form">
                
-            
-            <form  class="form-container" id="login">
+            <div>
+                <form  class="form-container" id="login">
                     <h1>LOGIN</h1>
                     <div class="msg"></div>
                     <label>Username:</label>
                     <input name="username" type="text" class="form-control" placeholder="Username">
                     <label>Password:</label>
                     <input name="password" type="password" class="form-control" placeholder="Password">
-                    <button type="submit" class="btn btn-block">Submit</button>
+                    <button id="login_btn" type="submit" class="btn btn-block">Login</button>
                     <p>Don't have an account yet?  <button type="button" onclick="register()">Register</button> </p>
                 </form>
-               
+             
                
                 <form  class="form-container" id="register">
                     <h1>REGISTER</h1>
@@ -31,9 +31,10 @@
                     <input name="username" type="text" class="form-control" placeholder="Username">
                     <label>Password:</label>
                     <input name="password" type="password" class="form-control" placeholder="Password">
-                    <button type="submit" class="btn btn-block">Submit</button>
+                    <button id="register_btn" type="submit" class="btn btn-block" >Register</button>
                     <p>Already have an account   <button type = "button" onclick="login()">Login</button> </p>
                 </form>
+            
             </div>
             <div class="col-md-4 col-sm-1 col-xs-12"></div>
         </div>
@@ -42,6 +43,7 @@
     <script>
         var x = document.getElementById("login");
         var y = document.getElementById("register");
+
 
         function register(){
             x.style.display = "none";
@@ -54,6 +56,8 @@
         }
     </script>
     <script src =" <?php echo __assets ?>src/js/register.js"> </script>
+    <script src =" <?php echo __assets ?>src/js/login.js"> </script>
+    
 
 </body>
 </html>
