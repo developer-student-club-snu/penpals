@@ -19,23 +19,66 @@ body{
     background-color: #1a1a1a;
     height: 100%;
     padding: 0px;
+    position: relative;
 }
 
-.message_area{
+.convo_area{
     background-color: #d9d9d9;
     height: 100%;
     padding: 0px;
 }
 .list_header{
     background-color: #121212;
-    height:75px;
+    height:70px;
 }
-.list_header h1{
-    color: white;
-    margin: 0px;
-    font-family: Helvetica;
-}
-.list_header span{
-    background-color: black;
 
+.logout_div{
+    height : 70px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    background-color: #121212;
+    text-align: center;
 }
+.convo_header{
+    background-color: #c1bebe;
+    height:70px;
+}
+.message_area{
+    height : 70px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    background-color: #c1bebe;
+    text-align: center;
+}
+.parent{
+    position: relative;
+    height:100%;
+    padding: 0px;
+}
+.textbox{
+    position: absolute;
+    resize: none;
+    height: 38px;
+    width: 95%;
+    font-size: 20px;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transform: translate(-50%,-50%);
+    top:50%;
+}
+.textbox:focus{
+    outline: none;
+}
+.send{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+}
+.send:hover{
+    cursor: pointer;
+}
+

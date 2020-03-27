@@ -21,7 +21,7 @@ body{
     color: white;
     font-weight: bold;
     margin: 0px;
-    margin-bottom: 10%;
+    margin-bottom: 20px;
 }
 .form-container label{
     font-size: 20px;
@@ -53,4 +53,10 @@ body{
 #register_text{
     display: none;
 
+}
+.parent{
+    text-align: center;
+}
+#info_login, #info_register{
+    color: red;
 }

@@ -10,7 +10,7 @@ document.querySelector('#register').addEventListener('submit',e=>{
         method: 'POST',
         body: data
     }).then(response => response.text()).then(response =>{
-        console.log(response);
+        document.querySelector('#info_register').innerHTML = response;
     }).catch(error => console.log(error));
 });
 

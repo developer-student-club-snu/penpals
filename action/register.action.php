@@ -3,13 +3,10 @@
 $conn = \global_db\db_conn();
 
 if(!isset($_POST) || !isset($_POST["username"])|| !isset($_POST["password"]) || (strlen($_POST["username"]) < 4) || (strlen($_POST["password"]) < 8))
-die(
-    '
-    {
-        "status" : "Username and Password need to be longer than 8 characters."
-    }
-    '
-);
+{
+    echo "Username and Password must be longer than 8 characters!";
+    die();
+}
 
 session_start();
 
@@ -23,13 +20,10 @@ $sql1 = 'SELECT * FROM users where username="' . $username . '";';
 $res = $conn->query($sql1);
 
 if(mysqli_num_rows($res) >= 1)
-die(
-    '
-    {
-        "status" : "Username already exists."
-    }
-    '
-);
+{
+    echo "Username already exists!";
+    die();
+}
 
 $sql = 'INSERT INTO users (username, salt, password) VALUES ("' . $username .'", "' . $salt . '", "' . $pass . '");';
 
@@ -37,12 +31,8 @@ $conn->query($sql);
 
 $_SESSION["status"] = true;
 
-die(
-    '
-    {
-        "status" : "Logged in"
-    }
-    '
-);
 
-require_once "index.php";
+{
+    echo "Logged in!";
+    die();
+}

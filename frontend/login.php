@@ -15,7 +15,7 @@
             <div>
                 <form  class="form-container" id="login">
                     <h1>LOGIN</h1>
-                    <div class="msg"></div>
+                    <div class = "parent"> <label id = "info_login"></label> </div>
                     <label>Username:</label>
                     <input name="username" type="text" class="form-control" placeholder="Username">
                     <label>Password:</label>
@@ -27,12 +27,13 @@
                
                 <form  class="form-container" id="register">
                     <h1>REGISTER</h1>
+                    <div class = "parent"> <label id = "info_register"></label> </div>
                     <label>Username:</label>
                     <input name="username" type="text" class="form-control" placeholder="Username">
                     <label>Password:</label>
                     <input name="password" type="password" class="form-control" placeholder="Password">
                     <button id="register_btn" type="submit" class="btn btn-block" >Register</button>
-                    <p>Already have an account   <button type = "button" onclick="login()">Login</button> </p>
+                    <p>Already have an account?   <button type = "button" onclick="login()">Login</button> </p>
                 </form>
             
             </div>
@@ -48,11 +49,13 @@
         function register(){
             x.style.display = "none";
             y.style.display = "block";
+            document.querySelector('#info_login').innerHTML = "";
         }
 
         function login(){
             x.style.display = "block";
             y.style.display = "none";
+            document.querySelector('#info_register').innerHTML = "";
         }
     </script>
     <script src =" <?php echo __assets ?>src/js/register.js"> </script>

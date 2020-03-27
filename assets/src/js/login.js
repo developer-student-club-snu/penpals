@@ -10,7 +10,7 @@ document.querySelector('#login').addEventListener('submit',e=>{
         method: 'POST',
         body: data
     }).then(response => response.text()).then(response =>{
-        console.log(response);
+        document.querySelector('#info_login').innerHTML = response;
     }).catch(error => console.log(error));
 });
 
