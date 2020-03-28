@@ -29,23 +29,24 @@ body{
 }
 .list_header{
     background-color: #121212;
-    height:70px;
+    height:12%;
 }
 
 .logout_div{
-    height : 70px;
+    height : 12%;
     width: 100%;
     position: absolute;
     bottom: 0px;
     background-color: #121212;
     text-align: center;
+    color: white;
 }
 .convo_header{
     background-color: #c1bebe;
-    height:70px;
+    height:12%;
 }
 .message_area{
-    height : 70px;
+    height : 12%;
     width: 100%;
     position: absolute;
     bottom: 0px;
@@ -81,4 +82,54 @@ body{
 .send:hover{
     cursor: pointer;
 }
+.menu{
+    transform: translateY(-50%);
+    position: absolute;
+    top:50%;
+    font-size: 30px;
+}
+.menu:hover{
+    cursor: pointer;
+}
+.actions{
+    height:76%;
+    text-align: center;
+}
+.start,.end{
+    padding:10px;
+    margin: 20px 0;
+    width: auto;
+    font-weight: bold;
+    border-radius: 20px;
+}
+.start:focus,.end:focus{
+    outline: none;
+}
+.chat{
+    height: 76%;
+    overflow-y:scroll;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 
+.message{
+    margin: 15px 15px 15px 15px;
+    display:flex;
+    bottom: 0;
+}
