@@ -29,6 +29,8 @@ $sql = 'INSERT INTO users (username, salt, password) VALUES ("' . $username .'",
 
 $conn->query($sql);
 
+
+
 $_SESSION["status"] = true;
 
 
