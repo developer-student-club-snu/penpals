@@ -73,14 +73,10 @@ body{
 .textbox:focus{
     outline: none;
 }
-.send{
+#message_send button{
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 50px;
-}
-.send:hover{
-    cursor: pointer;
 }
 .menu{
     transform: translateY(-50%);

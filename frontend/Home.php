@@ -49,19 +49,24 @@
             </div>
 
 
-            <div class = "message_area">
-                <div class="col-md-11 parent">
-                    <textarea class="textbox"></textarea>
+            
+            <form id="message_send">
+                <div class = "message_area">
+                    <div class="col-md-11 parent">
+                        <textarea class="textbox" name="message_body"></textarea>
+                    </div>
+                    <div class="col-md-1 parent">
+                        <button type = "submit">SEND </button>
+                    </div>  
                 </div>
-                <div class="col-md-1 parent">
-                <i class="fa fa-caret-right send"></i>
-                </div> 
-            </div>
+            </form>
         </div>
     
     </div>
     
     <script src =" <?php echo __assets ?>src/js/waitlist_check.js"> </script>
     <script src =" <?php echo __assets ?>src/js/start_conversation.js"> </script>
+    <script src =" <?php echo __assets ?>src/js/send_message.js"> </script>
+    <script src =" <?php echo __assets ?>src/js/end_conversation.js"> </script>
 </body>
 </html>
