@@ -9,16 +9,16 @@
 <body>
     <div class="container">
         
-        <div class="chat_list col-md-2">
+        <div class="chat_list col-md-2 ">
             <div class="list_header">
             </div>
             <div class="actions">
                 <label id="waitlist"></label>
                 <button class="start" id="start">Start Conversation</button>
-                <button class="end">End Conversation</button>
+                <button class="end" id = "end">End Conversation</button>
             </div>
             <div class = "logout_div">
-                <h2>LOGOUT</h2>
+                <button>LOGOUT</button>
             </div>
         </div>
        
@@ -30,7 +30,7 @@
                 <div class = "col-md-1 parent dropdown">
                     <i class="fa fa-bars dropdown-toggle menu"  data-toggle="dropdown"  aria-expanded="false"></i>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <buttin class="btn dropdown-item" href="#">Set Nickname</button>
+                        <button class="btn dropdown-item" id="nickname" href="#">Set Nickname</button>
                     </div>
                     
                 </div>
@@ -68,5 +68,6 @@
     <script src =" <?php echo __assets ?>src/js/start_conversation.js"> </script>
     <script src =" <?php echo __assets ?>src/js/send_message.js"> </script>
     <script src =" <?php echo __assets ?>src/js/end_conversation.js"> </script>
+    <script src =" <?php echo __assets ?>src/js/nickname.js"> </script>
 </body>
 </html>

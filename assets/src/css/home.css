@@ -35,11 +35,16 @@ body{
 .logout_div{
     height : 12%;
     width: 100%;
-    position: absolute;
+    position: relative;
     bottom: 0px;
     background-color: #121212;
     text-align: center;
-    color: white;
+    font-weight: bold;
+}
+.logout_div button{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 .convo_header{
     background-color: #c1bebe;
