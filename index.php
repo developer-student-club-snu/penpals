@@ -23,6 +23,7 @@
     
    session_start();
    $_SESSION["userId"]  = 1;
+   $_SESSION["username"] = "mokshjaswal";
     if(!empty($_SESSION["userId"])) {
         require_once "frontend/home.php";
     } else {

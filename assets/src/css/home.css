@@ -130,6 +130,10 @@ body{
 
 .message{
     margin: 15px 15px 15px 15px;
-    display:flex;
-    bottom: 0;
+}
+#waitlist{
+    color:white;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top:20px;
 }

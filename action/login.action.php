@@ -1,6 +1,4 @@
 <?php
-header("location: ../index.php");
-
 $conn = \global_db\db_conn();
 
 if(!isset($_POST) || !isset($_POST["username"])|| !isset($_POST["password"]) || (strlen($_POST["username"]) < 4) || (strlen($_POST["password"]) < 8))
@@ -39,8 +37,8 @@ if ($pass != $password)
 
 $_SESSION["status"] = true;
 $_SESSION["userId"] = $res['id'];
-?>
-<script>
-console.log("1233");
-</script>
 
+
+echo "Logged in";
+die();
+?>

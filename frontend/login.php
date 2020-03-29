@@ -61,6 +61,8 @@
     <script src =" <?php echo __assets ?>src/js/register.js"> </script>
     <script src =" <?php echo __assets ?>src/js/login.js"> </script>
     
+    
+
 
 </body>
 </html>

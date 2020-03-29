@@ -9,7 +9,7 @@ document.querySelector('#login').addEventListener('submit',e=>{
     fetch('action/login', {
         method: 'POST',
         body: data
-    }).then(response => response.text()).then(response =>{
+    }).then(response => response.text().then(response =>{
         document.querySelector('#info_login').innerHTML = response;
     }).catch(error => console.log(error));
 });

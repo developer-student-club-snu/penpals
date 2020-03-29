@@ -13,7 +13,8 @@
             <div class="list_header">
             </div>
             <div class="actions">
-                <button class="start">Start Conversation</button>
+                <label id="waitlist"></label>
+                <button class="start" id="start">Start Conversation</button>
                 <button class="end">End Conversation</button>
             </div>
             <div class = "logout_div">
@@ -59,5 +60,8 @@
         </div>
     
     </div>
+    
+    <script src =" <?php echo __assets ?>src/js/waitlist_check.js"> </script>
+    <script src =" <?php echo __assets ?>src/js/start_conversation.js"> </script>
 </body>
 </html>
