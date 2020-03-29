@@ -30,22 +30,31 @@
                 <div class = "col-md-1 parent dropdown">
                     <i class="fa fa-bars dropdown-toggle menu"  data-toggle="dropdown"  aria-expanded="false"></i>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <button class="btn dropdown-item" id="nickname" href="#">Set Nickname</button>
+                        <button type="buttom" class="btn dropdown-item" data-toggle="modal" data-target="#modal_nickname">Set Nickname</button>      
+                    </div>
+                    <div id="modal_nickname" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <form id = "nickname" >
+                                    <label>Set Nickname:</label>
+                                    <input placeholder = "nickname"></input>
+                                    <button type ="submit">Submit</button>
+
+                                </form>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                     
                 </div>
             </div>
 
-            <div class="chat parent">
-                 <div class=message>
-                    <h4><b>user:</b></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis nunc sed blandit libero volutpat sed cras ornare. Dolor purus non enim praesent elementum facilisis. Tincidunt augue interdum velit euismod in pellentesque massa. Mauris in aliquam sem fringilla ut. Amet dictum sit amet justo donec enim. Quam viverra orci sagittis eu volutpat odio. Urna molestie at elementum eu. Donec enim diam vulputate ut pharetra sit amet aliquam id. Rutrum quisque non tellus orci ac auctor augue. Tortor posuere ac ut consequat semper viverra.</p>
-                </div>
-                <div class=message>
-                    <h4><b>user:</b></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis nunc sed blandit libero volutpat sed cras ornare. Dolor purus non enim praesent elementum facilisis. Tincidunt augue interdum velit euismod in pellentesque massa. Mauris in aliquam sem fringilla ut. Amet dictum sit amet justo donec enim. Quam viverra orci sagittis eu volutpat odio. Urna molestie at elementum eu. Donec enim diam vulputate ut pharetra sit amet aliquam id. Rutrum quisque non tellus orci ac auctor augue. Tortor posuere ac ut consequat semper viverra.</p>
-                </div>
-                
+            <div class="chat parent" id="chat">
+                            
             </div>
 
 
@@ -64,10 +73,11 @@
     
     </div>
     
-    <script src =" <?php echo __assets ?>src/js/waitlist_check.js"> </script>
+    <script src =" <?php echo __assets ?>src/js/page_render_check.js"> </script>
     <script src =" <?php echo __assets ?>src/js/start_conversation.js"> </script>
     <script src =" <?php echo __assets ?>src/js/send_message.js"> </script>
     <script src =" <?php echo __assets ?>src/js/end_conversation.js"> </script>
-    <script src =" <?php echo __assets ?>src/js/nickname.js"> </script>
+    <script src =" <?php echo __assets ?>src/js/message_display.js"> </script>
+    
 </body>
 </html>
