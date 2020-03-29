@@ -17,3 +17,15 @@ fetch('action/display').then((res) => res.json())
     }
     
 }).catch(error =>console.log(error));
+
+fetch('action/menu_available')
+.then(response => response.text().then(response => {
+    document.querySelector('#dropdown').style.display = response;
+    document.querySelector('#convo_header').style.display = response;
+}).catch(error => console.log(error))
+);
+
+fetch('action/nickname_check')
+.then(response => response.text().then(response => {
+}).catch(error => console.log(error))
+);

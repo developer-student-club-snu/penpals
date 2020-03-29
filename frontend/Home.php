@@ -23,11 +23,11 @@
         </div>
        
         <div class="convo_area col-md-10">
-            <div class="convo_header">
-                <div class="col-md-11">
+            <div class="convo_header" >
+                <div class="col-md-11" id="convo_header">
                     <h1><b>USER</b></h1>
                 </div>
-                <div class = "col-md-1 parent dropdown">
+                <div class = "col-md-1 parent dropdown" id="dropdown">
                     <i class="fa fa-bars dropdown-toggle menu"  data-toggle="dropdown"  aria-expanded="false"></i>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <button type="buttom" class="btn dropdown-item" data-toggle="modal" data-target="#modal_nickname">Set Nickname</button>      
@@ -39,9 +39,8 @@
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 <form id = "nickname" >
                                     <label>Set Nickname:</label>
-                                    <input placeholder = "nickname"></input>
-                                    <button type ="submit">Submit</button>
-
+                                    <input name= "nick" placeholder = "nickname"></input>
+                                    <button type ="submit"  >Submit</button>
                                 </form>
                                     
                                 </div>
@@ -76,6 +75,7 @@
     <script src =" <?php echo __assets ?>src/js/page_render_check.js"> </script>
     <script src =" <?php echo __assets ?>src/js/start_conversation.js"> </script>
     <script src =" <?php echo __assets ?>src/js/send_message.js"> </script>
+    <script src =" <?php echo __assets ?>src/js/nickname.js"> </script>
     <script src =" <?php echo __assets ?>src/js/end_conversation.js"> </script>
     <script src =" <?php echo __assets ?>src/js/message_display.js"> </script>
     
