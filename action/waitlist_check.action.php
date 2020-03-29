@@ -2,6 +2,8 @@
 
 session_start();
 
+//Checking if waitlisted
+
 $conn = \global_db\db_conn();
 
 $user = $_SESSION['userId'];

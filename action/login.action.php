@@ -1,6 +1,7 @@
 <?php
 $conn = \global_db\db_conn();
 
+//Checking for Length of Username and Password
 if(!isset($_POST) || !isset($_POST["username"])|| !isset($_POST["password"]) || (strlen($_POST["username"]) < 4) || (strlen($_POST["password"]) < 8))
 {
     echo "Username and Password must be longer than 8 characters!";
@@ -11,8 +12,8 @@ session_start();
 
 $username = md5($_POST["username"]);
 
+//Check if username exists
 $sql1 = 'SELECT * FROM users where username="' . $username . '"';
-
 $res = $conn->query($sql1);
 
 if(mysqli_num_rows($res) < 1)
@@ -21,14 +22,12 @@ if(mysqli_num_rows($res) < 1)
     die();
 }
 
-
 $res = mysqli_fetch_assoc($res);
-
 $salt = $res['salt'];
-
 $password = $res['password'];
-
 $pass = hash("sha256", $salt . $_POST["password"]);
+
+//Checking Password
 if ($pass != $password)
 {
     echo "Password is Incorrect!";
