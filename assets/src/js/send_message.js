@@ -10,11 +10,10 @@ document.querySelector('#message_send').addEventListener('submit',e=>{
         method: 'POST',
         body: data
     }).then(response => response.text().then(response =>{
-        console.log(response);
     }).catch(error => console.log(error)));
 
     fetch('action/display').then((res) => res.json())
-.then(response => {
+    .then(response => {
     let output ="";
     for(let i in response){
         output += `<div class="message">

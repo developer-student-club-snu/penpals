@@ -13,4 +13,10 @@ document.querySelector('#nickname').addEventListener('submit', e=> {
     }).then(response => response.text()).then(response =>{
         console.log(response);
     }).catch(error => console.log(error));
+
+    fetch('action/nickname_check')
+.then(response => response.text().then(response => {
+    document.querySelector("#heading").innerHTML = response;
+}).catch(error => console.log(error))
+);
 });

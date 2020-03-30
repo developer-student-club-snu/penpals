@@ -32,6 +32,6 @@ $conn->query($sql);
 $_SESSION["status"] = true;
 
 {
-    echo "Logged in!";
+    header("location : /index.php");
     die();
 }

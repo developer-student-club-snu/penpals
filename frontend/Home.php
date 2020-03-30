@@ -25,7 +25,7 @@
         <div class="convo_area col-md-10">
             <div class="convo_header" >
                 <div class="col-md-11" id="convo_header">
-                    <h1><b>USER</b></h1>
+                    <h1 id="heading"><b></b></h1>
                 </div>
                 <div class = "col-md-1 parent dropdown" id="dropdown">
                     <i class="fa fa-bars dropdown-toggle menu"  data-toggle="dropdown"  aria-expanded="false"></i>
@@ -40,7 +40,7 @@
                                 <form id = "nickname" >
                                     <label>Set Nickname:</label>
                                     <input name= "nick" placeholder = "nickname"></input>
-                                    <button type ="submit"  >Submit</button>
+                                    <button type ="submit">Submit</button>
                                 </form>
                                     
                                 </div>
@@ -53,7 +53,7 @@
             </div>
 
             <div class="chat parent" id="chat">
-                            
+                                                        
             </div>
 
 

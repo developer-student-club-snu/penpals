@@ -6,7 +6,7 @@ $conn = \global_db\db_conn();
 $user = $_SESSION['userId'];
 
 //check if already in a conversation
-$sql5 = 'SELECT * FROM  conversations where (user1 = "' . $user .'" OR user2 = "' . $user . '" ) AND status ="1"';
+$sql5 = 'SELECT * FROM  conversations where (user1 = "' . $user .'" OR user2 = "' . $user . '" ) ';
 $conv = $conn->query($sql5);
 if(mysqli_num_rows($conv)>=1){
     echo "already in a conversation";
@@ -19,7 +19,7 @@ $test = $conn->query($sql);
 if(mysqli_num_rows($test) >= 1){
 
     $test = mysqli_fetch_assoc($test);
-    $partner = $test['id'];
+    $partner = $test['user'];
     
     $sql3 = 'INSERT INTO conversations (user1, user2, status) VALUES ("' . $user .'","' . $partner .'","1");';
     $convo = $conn->query($sql3);
