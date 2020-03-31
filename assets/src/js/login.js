@@ -11,6 +11,6 @@ document.querySelector('#login').addEventListener('submit',e=>{
         body: data
     }).then(response => response.text().then(response =>{
         document.querySelector('#info_login').innerHTML = response;
-    }).catch(error => console.log(error)));
+    }).catch(error => console.log(error));
 });
 

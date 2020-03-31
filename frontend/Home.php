@@ -5,8 +5,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo __assets; ?>src/css/home.css">
-    <style>
-    </style>
 </head>
 <body>
     <div class="container">
@@ -25,7 +23,7 @@
         <div class="convo_area col-md-10">
             <div class="convo_header" >
                 <div class="col-md-11" id="convo_header">
-                    <h1><b>USER</b></h1>
+                    <h1><b id="heading">USER</b></h1>
                 </div>
                 <div class = "col-md-1 parent dropdown" id="dropdown">
                     <i class="fa fa-ellipsis-v dropdown-toggle menu" data-toggle="dropdown"  aria-expanded="false"></i>
@@ -51,9 +49,9 @@
                                 <div class="modal-body">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 <form id = "nickname" >
-                                    <label style="letter-spacing: 1px;">Set Nickname:</label>
-                                    <input name= "nick" class="nickname-text" placeholder = "Enter Nickname"></input>
-                                    <button type ="submit" class="submit_btn" style="">Submit</button>
+                                    <label>Set Nickname:</label>
+                                    <input name= "nick" placeholder = "Enter Nickname"></input>
+                                    <button type ="submit"  >Submit</button>
                                 </form>
                                     
                                 </div>
@@ -80,7 +78,7 @@
                 </div>
             </div>
 
-            <div class="chat parent" id="chat">
+            <div class="chat parent col-md-12" id="chat">
                             
             </div>
             
@@ -89,7 +87,7 @@
                 <div class = "message_area">
                 
                     <div class="col-md-11 parent">
-                        <textarea class="textbox" placeholder="Text" name="message_body"></textarea>
+                        <textarea class="textbox" placeholder="Type a Message" name="message_body"></textarea>
                     </div>
                     <div class="col-md-1 parent">
                         <button class="send_btn" type = "submit"><img src="<?php echo __assets ?>image/send-icon.png" class="send_img"></button>

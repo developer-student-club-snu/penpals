@@ -10,7 +10,6 @@ document.querySelector('#message_send').addEventListener('submit',e=>{
         method: 'POST',
         body: data
     }).then(response => response.text().then(response =>{
-        document.querySelector("#info").innerHtml
     }).catch(error => console.log(error)));
 
     fetch('action/display').then((res) => res.json())

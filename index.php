@@ -20,9 +20,10 @@
 	$path1 = explode("?", $path);
 	$path = ltrim($path1[0], '/');
     $elem = explode('/', $path);
-session_start();
-$_SESSION['userId'] = '1';
-$_SESSION['username'] = "moksh";
+
+    session_start();
+    $_SESSION['userId'] = '1';
+    $_SESSION['username'] = 'Pablo';
     
     if(!empty($_SESSION["userId"])) {
         require_once "frontend/home.php";
