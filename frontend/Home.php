@@ -39,7 +39,7 @@
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 <form id = "nickname" >
                                     <label>Set Nickname:</label>
-                                    <input name= "nick" placeholder = "nickname"></input>
+                                    <input name= "nick" placeholder = "Enter Nickname"></input>
                                     <button type ="submit"  >Submit</button>
                                 </form>
                                     
@@ -87,7 +87,7 @@
                 <div class = "message_area">
                 
                     <div class="col-md-11 parent">
-                        <textarea class="textbox" placeholder="Text" name="message_body"></textarea>
+                        <textarea class="textbox" placeholder="Type a Message" name="message_body"></textarea>
                     </div>
                     <div class="col-md-1 parent">
                         <button class="send_btn" type = "submit"><img src="<?php echo ___assets ?>src/icons/send-icon.png" class="send_img"></button>
