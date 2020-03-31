@@ -90,7 +90,7 @@
                         <textarea class="textbox" placeholder="Text" name="message_body"></textarea>
                     </div>
                     <div class="col-md-1 parent">
-                        <button class="send_btn" type = "submit"><img src="send-icon.png" class="send_img"></button>
+                        <button class="send_btn" type = "submit"><img src="<?php echo ___assets ?>src/icons/send-icon.png" class="send_img"></button>
                     </div>  
                 </div>
             </form>
