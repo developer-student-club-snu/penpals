@@ -187,6 +187,7 @@ body{
 .chat{
     height: 76%;
     overflow-y:scroll;
+    overflow-wrap: break-word;
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -225,6 +226,7 @@ body{
 
 #modal_nickname{
     top:35%;
+    text-align: center;
 }
 #info{
     top:35%;

@@ -2,7 +2,7 @@
 $conn = \global_db\db_conn();
 
 //Check if message has been entered
-if(!isset($_POST) || !isset($_POST["message_body"]))
+if(!isset($_POST) || !isset($_POST["message_body"]) || strlen(($_POST["message_body"]))<200)
 {
     echo "NO";
     die();
