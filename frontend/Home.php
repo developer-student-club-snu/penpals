@@ -8,29 +8,29 @@
 </head>
 <body>
     <div class="container">
-        
+
         <div class="chat_list col-md-2 ">
             <div class="list_header">
             </div>
             <div class="actions">
-                <label id="waitlist"></label>
-                <button class="start" id="start">Start Conversation</button>
-                <button class="end" id = "end">End Conversation</button>
+                
+                <button class="start" id="start" data-toggle="modal" data-target="#modal_start">Start Conversation &nbsp;<i class="fa fa-chevron-right" style="font-size: 11px;"></i> </button>
             </div>
-            <div class = "logout_div">
-                <button>LOGOUT</button>
-            </div>
+            
+                <button class="end" style="">LOGOUT</button>
+            
         </div>
        
         <div class="convo_area col-md-10">
             <div class="convo_header" >
                 <div class="col-md-11" id="convo_header">
-                    <h1 id="heading"><b></b></h1>
+                    <h1><b>USER</b></h1>
                 </div>
                 <div class = "col-md-1 parent dropdown" id="dropdown">
-                    <i class="fa fa-bars dropdown-toggle menu"  data-toggle="dropdown"  aria-expanded="false"></i>
+                    <i class="fa fa-ellipsis-v dropdown-toggle menu" data-toggle="dropdown"  aria-expanded="false"></i>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <button type="buttom" class="btn dropdown-item" data-toggle="modal" data-target="#modal_nickname">Set Nickname</button>      
+                        <a type="button" class="btn dropdown-dropdown-content1" data-toggle="modal" data-target="#modal_nickname">Set Nickname</a>
+                        <a type="button" id = "end" class="btn dropdown-dropdown-content1" data-toggle="modal" data-target="#modal_end">End Conversation</a>     
                     </div>
                     <div id="modal_nickname" class="modal fade" role="dialog">
                         <div class="modal-dialog">
@@ -40,7 +40,7 @@
                                 <form id = "nickname" >
                                     <label>Set Nickname:</label>
                                     <input name= "nick" placeholder = "nickname"></input>
-                                    <button type ="submit">Submit</button>
+                                    <button type ="submit"  >Submit</button>
                                 </form>
                                     
                                 </div>
@@ -48,23 +48,49 @@
 
                         </div>
                     </div>
-                    
+
+                    <div id="modal_end" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                
+                                <label id="waitlist"></label>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="modal_start" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                
+                                <label id="waitlist"></label>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="chat parent" id="chat">
-                                                        
+                            
             </div>
-
-
-            
+        
+        
+        
+        
             <form id="message_send">
                 <div class = "message_area">
+                
                     <div class="col-md-11 parent">
-                        <textarea class="textbox" name="message_body"></textarea>
+                        <textarea class="textbox" placeholder="Text" name="message_body"></textarea>
                     </div>
                     <div class="col-md-1 parent">
-                        <button type = "submit">SEND </button>
+                        <button class="send_btn" type = "submit"><img src="send-icon.png" class="send_img"></button>
                     </div>  
                 </div>
             </form>
