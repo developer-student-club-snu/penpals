@@ -9,7 +9,7 @@ if(!isset($_POST) || !isset($_POST["username"])|| !isset($_POST["password"]) || 
 }
 
 session_start();
-
+$_SESSION['username'] =$_POST['username'];
 $username = md5($_POST["username"]);
 
 //Check if username exists
@@ -37,7 +37,5 @@ if ($pass != $password)
 $_SESSION["status"] = true;
 $_SESSION["userId"] = $res['id'];
 
-
-echo "Logged in";
 die();
 ?>
