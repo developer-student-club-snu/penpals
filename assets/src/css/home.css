@@ -10,9 +10,11 @@ body{
 	top:0;
 	bottom: 0;
 	left: 0;
+    box-shadow: 30px 20px 50px 0px #202529;
 	right: 0;
     margin: auto;
     padding: 0px;
+
 }
 
 .chat_list{
@@ -44,6 +46,7 @@ body{
 .logout_div button{
     position: absolute;
     top: 50%;
+
     transform: translate(-50%,-50%);
 }
 .convo_header{
@@ -70,13 +73,17 @@ body{
     width: 95%;
     font-size: 20px;
     border-radius: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 80px;
+    padding-top:3px;
+    margin-left: 40px;
     transform: translate(-50%,-50%);
     top:50%;
+
 }
 .textbox:focus{
     outline: none;
+    
 }
 #message_send button{
     position: relative;
@@ -96,16 +103,69 @@ body{
     height:76%;
     text-align: center;
 }
-.start,.end{
-    padding:10px;
-    margin: 20px 0;
-    width: auto;
-    font-weight: bold;
-    border-radius: 20px;
+.start{
+    font-size:17px;
+    font-family: Helvetica;
+    position:absolute;
+    left:0;
+    color:white;
+    background-color:#1a1a1a;
+    height:60px;
+    width:100%;
+    border:none;
+    -webkit-transition:0.6s;
+    transition:ease-in 0.6s;
+    top:20%;
 }
-.start:focus,.end:focus{
+
+.start:hover{
     outline: none;
+    background-color:#303030;
+    
 }
+.end{
+    font-size:17px;
+    font-family: Helvetica;
+    position:absolute;
+    left:0;
+    color:white;
+    background-color:#1a1a1a;
+    height:60px;
+    width:100%;
+    border:none;
+    -webkit-transition:0.6s;
+    transition:ease-in 0.6s;
+    bottom:19.9px;
+}
+.end:hover{
+    outline: none;
+    background-color:#303030;
+    
+}
+.send_btn{
+    border:none;
+    background-color: transparent;
+    color:white;
+    overflow: hidden;
+    height:35px;
+    width: 70px;
+    font-size:17px;
+    position:absolute;
+    bottom:2%;
+    -webkit-transition:0.5s;
+    transition:0.5s;
+    border-radius:20px;
+    right:58px;
+}
+
+.send_img{
+    position:absolute;
+    height:40px;
+    width:50px;
+    left: 15px;
+    top:-1px;
+}
+
 .chat{
     height: 76%;
     overflow-y:scroll;
