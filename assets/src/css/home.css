@@ -32,8 +32,17 @@ body{
 .list_header{
     background-color: #121212;
     height:12%;
+    position: relative;
+    text-align: center;
 }
-
+.list_header h3{
+    color: white;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 .logout_div{
     height : 12%;
     width: 100%;
@@ -104,7 +113,7 @@ body{
     text-align: center;
 }
 .start{
-    font-size:17px;
+    font-size:30px;
     font-family: Helvetica;
     position:absolute;
     left:0;
@@ -116,6 +125,9 @@ body{
     -webkit-transition:0.6s;
     transition:ease-in 0.6s;
     top:20%;
+}
+.start:focus{
+    outline: none;
 }
 
 .start:hover{
@@ -135,12 +147,13 @@ body{
     border:none;
     -webkit-transition:0.6s;
     transition:ease-in 0.6s;
-    bottom:19.9px;
 }
 .end:hover{
     outline: none;
-    background-color:#303030;
-    
+    background-color:#303030;   
+}
+.end:focus{
+    outline: none;
 }
 .send_btn{
     border:none;
@@ -163,7 +176,7 @@ body{
     height:40px;
     width:50px;
     left: 15px;
-    top:-1px;
+    top: -1.1px;
 }
 
 .chat{
@@ -193,8 +206,14 @@ body{
     margin: 15px 15px 15px 15px;
 }
 #waitlist{
-    color:white;
+    color:black;
     font-weight: bold;
     font-size: 24px;
     margin-top:20px;
+}
+.align{
+    text-align: center;
+}
+.dropdown-menu a{
+    color: black;
 }

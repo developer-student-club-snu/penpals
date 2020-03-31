@@ -11,26 +11,41 @@
 
         <div class="chat_list col-md-2 ">
             <div class="list_header">
+                <h3 id="greeting"></h3>
             </div>
             <div class="actions">
                 
-                <button class="start" id="start" data-toggle="modal" data-target="#modal_start">Start Conversation &nbsp;<i class="fa fa-chevron-right" style="font-size: 11px;"></i> </button>
+                <button class="start" id="start" data-toggle="modal" data-target="#info"><i class="fa fa-plus"></i></button>
             </div>
-            
-                <button class="end" style="">LOGOUT</button>
+                <button class="end"  data-toggle="modal" data-target="#logout" style="">LOGOUT</button>
+
+                <div id="logout" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body align">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <label>Are you sure you want to logout? </label><br>
+                                    <button type="button" id="logout_btn" >Yes</button>
+                                    <button type="button" data-dismiss="modal">No</button>
+                                                                  
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
             
         </div>
        
         <div class="convo_area col-md-10">
             <div class="convo_header" >
                 <div class="col-md-11" id="convo_header">
-                    <h1><b>USER</b></h1>
+                    <h1><b id="heading">USER</b></h1>
                 </div>
                 <div class = "col-md-1 parent dropdown" id="dropdown">
                     <i class="fa fa-ellipsis-v dropdown-toggle menu" data-toggle="dropdown"  aria-expanded="false"></i>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a type="button" class="btn dropdown-dropdown-content1" data-toggle="modal" data-target="#modal_nickname">Set Nickname</a>
-                        <a type="button" id = "end" class="btn dropdown-dropdown-content1" data-toggle="modal" data-target="#modal_end">End Conversation</a>     
+                        <a type="button" id = "end" class="btn dropdown-dropdown-content1" data-toggle="modal" data-target="#info">End Conversation</a>     
                     </div>
                     <div id="modal_nickname" class="modal fade" role="dialog">
                         <div class="modal-dialog">
@@ -48,35 +63,25 @@
 
                         </div>
                     </div>
-
-                    <div id="modal_end" class="modal fade" role="dialog">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                
-                                <label id="waitlist"></label>
-                                    
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div id="modal_start" class="modal fade" role="dialog">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                
-                                <label id="waitlist"></label>
-                                    
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
                 </div>
+
+                    <div id="info" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body align">
+                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <label id="waitlist"></label>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                
             </div>
 
-            <div class="chat parent" id="chat">
+            <div class="chat parent col-md-12" id="chat">
                             
             </div>
         
@@ -90,7 +95,7 @@
                         <textarea class="textbox" placeholder="Text" name="message_body"></textarea>
                     </div>
                     <div class="col-md-1 parent">
-                        <button class="send_btn" type = "submit"><img src="send-icon.png" class="send_img"></button>
+                        <button class="send_btn" type = "submit"><img src="<?php echo __assets ?>image/send-icon.png" class="send_img"></button>
                     </div>  
                 </div>
             </form>
