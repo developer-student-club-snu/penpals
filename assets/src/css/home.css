@@ -32,6 +32,16 @@ body{
 .list_header{
     background-color: #121212;
     height:12%;
+    position: relative;
+    text-align: center;
+}
+.list_header h3{
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
 }
 
 .logout_div{
@@ -121,8 +131,10 @@ body{
 
 .start:hover{
     outline: none;
-    background-color:#303030;
-    
+    background-color:#303030;  
+}
+.start:focus{
+    outline: none;
 }
 .end{
     font-size:17px;
@@ -140,8 +152,10 @@ body{
 }
 .end:hover{
     outline: none;
-    background-color:#303030;
-    
+    background-color:#303030;   
+}
+.end:focus{
+    outline: none;
 }
 
 .nickname-text{
@@ -236,8 +250,34 @@ body{
     margin: 15px 15px 15px 15px;
 }
 #waitlist{
-    color:white;
+    color:black;
     font-weight: bold;
     font-size: 24px;
     margin-top:20px;
+}
+#info{
+    text-align: center;
+}
+.dropdown-menu a{
+    color: black;
+}
+
+#modal_nickname{
+    top:35%;
+}
+#info{
+    top:35%;
+}
+#logout{
+    top:35%;
+    text-align: center;
+}
+.send_btn:focus{
+outline: none;
+}
+.fa-plus{
+    font-size: 30px;
+}
+#logout {
+    font-size: 20px;
 }

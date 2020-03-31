@@ -34,7 +34,14 @@ if(sizeof($pathArray) <= 1)
 array_shift($pathArray);
 $fileIdentifier = array_shift($pathArray);
 $fileLocation = "";
-
+if($fileIdentifier == "plugin")
+{
+    $fileLocation = DocRoot . "plugins" . DS . array_shift($pathArray) . DS . "action" . DS . join(DS, $pathArray) . ".action.php";
+}
+else
+{
+    $fileLocation = DocRoot . "action" . DS . $fileIdentifier . (sizeof($pathArray) >= 1 ? DS . join(DS, $pathArray) : "") . ".action.php";
+}
 if(file_exists($fileLocation))
 {
 	include $fileLocation;
