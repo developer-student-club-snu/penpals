@@ -22,9 +22,9 @@
     $elem = explode('/', $path);
 
     session_start();
-    $_SESSION['userId'] = '1';
-    $_SESSION['username'] = 'Pablo';
-    
+    $_SESSION['userID'] = '1';
+    $_SESSION['username'] = 'Moksh';
+
     if(!empty($_SESSION["userId"])) {
         require_once "frontend/home.php";
     } else {

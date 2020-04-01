@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-
+    
         <div class="chat_list col-md-2 ">
             <div class="list_header">
                 <h3 id="greeting"></h3>
@@ -20,16 +20,16 @@
                 <button class="end" data-toggle = "modal" data-target="#logout">LOGOUT</button>
         </div>
        
-        <div class="convo_area col-md-10">
+        <div class="convo_area col-md-10 col-sm-12">
             <div class="convo_header" >
-                <div class="col-md-11" id="convo_header">
-                    <h1><b id="heading">USER</b></h1>
+                <div class="col-md-11 col-sm-11 convo_heading parent">
+                    <h2><b id="heading">Friend</b></h2>
                 </div>
-                <div class = "col-md-1 parent dropdown" id="dropdown">
+                <div class = "col-md-1 col-sm-1 parent dropdown" id="dropdown">
                     <i class="fa fa-ellipsis-v dropdown-toggle menu" data-toggle="dropdown"  aria-expanded="false"></i>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a type="button" class="btn dropdown-dropdown-content1" data-toggle="modal" data-target="#modal_nickname">Set Nickname</a>
-                        <a type="button" id = "end" class="btn dropdown-dropdown-content1" data-toggle="modal" data-target="#info">End Conversation</a>     
+                        <a type="button" class="btn dropdown-dropdown-content1" data-toggle="modal" data-target="#end_convo">End Conversation</a>     
                     </div>
                     <div id="info" class="modal fade" role="dialog">
                         <div class="modal-dialog">
@@ -67,6 +67,22 @@
                                     <label style="letter-spacing: 1px;">Are you sure you want to logout?</label><br>
                                     <button type ="button" id="logout_btn" style="">Yes</button>
                                     <button type="button" data-dismiss="modal">No</button>
+                              
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="end_convo"  class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </form>  
+                                <label style="letter-spacing: 1px;">Are you sure you want to end the conversation?</label><br>
+                                    <button type ="submit" data-dismiss="modal" id ="end" style="">Yes</button>
+                                    <button type="button" data-dismiss="modal">No</button>
                                 </form>
                                     
                                 </div>
@@ -98,12 +114,13 @@
     
     </div>
     
+   
     <script src =" <?php echo __assets ?>src/js/page_render_check.js"> </script>
     <script src =" <?php echo __assets ?>src/js/start_conversation.js"> </script>
     <script src =" <?php echo __assets ?>src/js/send_message.js"> </script>
     <script src =" <?php echo __assets ?>src/js/nickname.js"> </script>
     <script src =" <?php echo __assets ?>src/js/end_conversation.js"> </script>
-    <script src =" <?php echo __assets ?>src/js/message_display.js"> </script>
+   
     
 </body>
 </html>

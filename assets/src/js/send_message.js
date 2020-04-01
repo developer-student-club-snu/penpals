@@ -10,6 +10,9 @@ document.querySelector('#message_send').addEventListener('submit',e=>{
         method: 'POST',
         body: data
     }).then(response => response.text().then(response =>{
+        if(response){
+        $("#info").modal('show');
+        document.querySelector("#waitlist").innerHTML= response;}
     }).catch(error => console.log(error)));
 
     fetch('action/display').then((res) => res.json())

@@ -9,7 +9,7 @@ $user = $_SESSION['userId'];
 $sql5 = 'SELECT * FROM  conversations where (user1 = "' . $user .'" OR user2 = "' . $user . '" ) ';
 $conv = $conn->query($sql5);
 if(mysqli_num_rows($conv)>=1){
-    echo "already in a conversation";
+    echo "You are already in a conversation !";
     die();
 }
 
@@ -27,7 +27,7 @@ if(mysqli_num_rows($test) >= 1){
     $sql4 = 'UPDATE waitinglist SET status = "0" where user = "'. $partner .'"';
     $change = $conn->query($sql4);
 
-    echo " ";
+    echo "You have been paired !";
     die();
 
 }

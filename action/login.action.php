@@ -2,12 +2,17 @@
 $conn = \global_db\db_conn();
 
 //Checking for Length of Username and Password
-if(!isset($_POST) || !isset($_POST["username"])|| !isset($_POST["password"]) || (strlen($_POST["username"]) < 4) || (strlen($_POST["password"]) < 8))
+if(!isset($_POST) || !isset($_POST["username"])|| !isset($_POST["password"]) )
 {
-    echo "Username and Password must be longer than 8 characters!";
+    echo "Please Enter Username and Password";
     die();
 }
 
+if( (strlen($_POST["username"]) == 0 ) || (strlen($_POST["password"]) == 0) )
+{
+    echo "Please Enter Username and Password";
+    die();
+}
 session_start();
 
 $username = md5($_POST["username"]);

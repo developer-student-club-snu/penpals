@@ -2,9 +2,9 @@
 $conn = \global_db\db_conn();
 
 //Check if message has been entered
-if(!isset($_POST) || !isset($_POST["message_body"]) || strlen(($_POST["message_body"]))<200)
+if(!isset($_POST) || !isset($_POST["message_body"]) || strlen(($_POST["message_body"]))<100)
 {
-    echo "NO";
+    echo "Message should be atleast 100 characters long";
     die();
 }
 
@@ -31,5 +31,4 @@ $convo_id = $res['id'];
 //Inserting into messages
 $sql = 'INSERT INTO messages (conversation, sender, receiver,content) VALUES ("' . $convo_id .'", "' . $user . '", "' . $partner_id . '","'. $message .'");';
 $result = $conn->query($sql);
-echo "Yes";
 ?>

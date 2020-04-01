@@ -34,6 +34,11 @@ body{
     margin-top: 10%;
     font-size: 24px;
     font-weight: bold;
+    border-radius: 20px;
+}
+.btn:focus , .btn:selected {
+    outline: none;
+    border: none;
 }
 .form-container p{
     text-align: center;
@@ -44,9 +49,7 @@ body{
 .form-container p button{
     color: black;
 }
-#login{
 
-}
 #register{
     display: none;
 }
@@ -59,4 +62,21 @@ body{
 }
 #info_login, #info_register{
     color: red;
+}
+
+@media only screen and (max-width: 1024px){
+    .form-container label{
+        font-size: 48px;
+    }
+    .form-container input{
+        height: auto;
+        font-size: 38px;
+    }
+    .form-container button, .form-container p{
+        font-size: 38px;
+    }
+    .form-container h1{
+        font-size: 58px;
+    }
+
 }

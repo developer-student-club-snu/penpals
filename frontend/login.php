@@ -9,7 +9,7 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4 col-sm-1 col-xs-12"></div>
+            <div class="col-md-4 col-sm-1"></div>
             <div class="col-md-4 col-sm-10 col-xs-12 form">
                
             <div>
@@ -37,7 +37,7 @@
                 </form>
             
             </div>
-            <div class="col-md-4 col-sm-1 col-xs-12"></div>
+            <div class="col-md-4 col-sm-1"></div>
         </div>
     </div>
 
