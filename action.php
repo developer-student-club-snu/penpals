@@ -18,6 +18,7 @@ include_once "config/meta.conf.php";
  * action file in the plugin's action folder.
  */
 $linkURI = $_SERVER['REQUEST_URI'];
+echo $linkURI;
 $removeQ = explode("?", $linkURI);
 $preLink = $removeQ[0];
 $preLink = ltrim($preLink, '/');

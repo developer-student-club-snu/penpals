@@ -1,10 +1,8 @@
 document.querySelector('#login').addEventListener('submit',e=>{
     e.preventDefault();
     let form = document.querySelector('#login');
-    const data = new URLSearchParams();
-    for(const p of new FormData(form)){
-        data.append(p[0],p[1]);
-    }
+    const data = new FormData(form);
+    
 
     fetch('action/login', {
         method: 'POST',
