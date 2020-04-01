@@ -13,7 +13,6 @@ if( (strlen($_POST["username"]) == 0 ) || (strlen($_POST["password"]) == 0) )
     echo "Please Enter Username and Password";
     die();
 }
-session_start();
 
 $username = md5($_POST["username"]);
 
@@ -43,6 +42,6 @@ $_SESSION["status"] = true;
 $_SESSION["userId"] = $res['id'];
 
 
-header("location: index.php");
+header("location: /index.php");
 die();
 ?>

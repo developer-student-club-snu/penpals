@@ -1,7 +1,7 @@
 <?php
 
 $conn = \global_db\db_conn();
-session_start();
+ 
 $user=$_SESSION['userId'];
 
 //check whether in a conversation

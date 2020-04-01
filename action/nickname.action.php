@@ -7,7 +7,7 @@ if (!isset($_POST) || !isset($_POST["nick"])|| strlen($_POST["nick"]) < 1)
     die();
 }
 
-session_start();
+ 
 $user=$_SESSION['userId'];
 $nickname = $_POST["nick"];
 

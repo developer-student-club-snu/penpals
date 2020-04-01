@@ -11,6 +11,8 @@ include_once "config/sys.conf.php";
 include_once "config/db.conf.php";
 include_once "config/meta.conf.php";
 
+session_start();
+
 /*
  * Path resolver
  * The action 'router' basically checks if the second part of the link,
