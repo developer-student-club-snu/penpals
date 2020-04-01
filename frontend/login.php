@@ -25,7 +25,7 @@
                 </form>
              
                
-                <form  class="form-container" id="register" method="POST" action="/action/login">
+                <form  class="form-container" id="register" method="POST" action="/action/register">
                     <h1>REGISTER</h1>
                     <div class = "parent"> <label id = "info_register"></label> </div>
                     <label>Username:</label>

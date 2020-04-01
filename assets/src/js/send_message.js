@@ -1,12 +1,10 @@
 document.querySelector('#message_send').addEventListener('submit',e=>{
     e.preventDefault();
     let form = document.querySelector('#message_send');
-    const data = new URLSearchParams();
-    for(const p of new FormData(form)){
-        data.append(p[0],p[1]);
-    }
+    const data = new FormData(form);
 
-    fetch('action/send_message', {
+
+    fetch('/action/send_message', {
         method: 'POST',
         body: data
     }).then(response => response.text().then(response =>{
@@ -15,7 +13,7 @@ document.querySelector('#message_send').addEventListener('submit',e=>{
         document.querySelector("#waitlist").innerHTML= response;}
     }).catch(error => console.log(error)));
 
-    fetch('action/display').then((res) => res.json())
+    fetch('/action/display').then((res) => res.json())
     .then(response => {
     let output ="";
     for(let i in response){

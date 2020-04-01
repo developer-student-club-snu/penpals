@@ -1,10 +1,10 @@
-fetch('action/waitlist_check')
+fetch('/action/waitlist_check')
 .then(response => response.text().then(response => {
     document.querySelector('#waitlist').innerHTML = response;
 }).catch(error => console.log(error))
 );
 
-fetch('action/display').then((res) => res.json())
+fetch('/action/display').then((res) => res.json())
 .then(response => {
     let output ="";
     for(let i in response){
@@ -18,20 +18,20 @@ fetch('action/display').then((res) => res.json())
     
 }).catch(error =>console.log(error));
 
-fetch('action/menu_available')
+fetch('/action/menu_available')
 .then(response => response.text().then(response => {
     document.querySelector('#dropdown').style.display = response;
     document.querySelector('.convo_heading').style.display = response;
 }).catch(error => console.log(error))
 );
 
-fetch('action/nickname_check')
+fetch('/action/nickname_check')
 .then(response => response.text().then(response => {
     document.querySelector("#heading").innerHTML = response;
 }).catch(error => console.log(error))
 );
 
-fetch('action/greeting')
+fetch('/action/greeting')
 .then(response => response.text().then(response => {
     document.querySelector('#greeting').innerHTML = response;
 }).catch(error => console.log(error))

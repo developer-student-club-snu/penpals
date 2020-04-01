@@ -2,7 +2,7 @@
 
  
 $a = "Hello, ";
-$b = $_SESSION['username'];
+$b = $_SESSION['userId'];
 $c = $a . $b;
 echo $c;
 
