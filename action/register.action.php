@@ -9,7 +9,7 @@ if(!isset($_POST) || !isset($_POST["username"])|| !isset($_POST["password"]) || 
     die();
 }
 
-session_start();
+ 
 
 $username = md5($_POST["username"]);
 $salt = md5(time() . (rand() * 1000));

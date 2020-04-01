@@ -10,7 +10,9 @@
 
 	include_once "config/sys.conf.php";
 	include_once "config/db.conf.php";
-	include_once "config/meta.conf.php";
+    include_once "config/meta.conf.php";
+    
+    session_start();
 
 
 	include_once "core" . DS . "routeHandler.php";
@@ -22,8 +24,8 @@
     $elem = explode('/', $path);
 
 
-    if(!empty($_SESSION["userId"])) {
-        require_once "frontend/home.php";
+    if($_SESSION["status"]) {
+        require_once "frontend/Home.php";
     } else {
         require_once  "frontend/login.php";
     }

@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+ 
 
 $conn = \global_db\db_conn();
 $user = $_SESSION['userId'];

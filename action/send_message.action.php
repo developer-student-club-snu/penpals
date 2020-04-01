@@ -8,7 +8,7 @@ if(!isset($_POST) || !isset($_POST["message_body"]) || strlen(($_POST["message_b
     die();
 }
 
-session_start();
+ 
 $message = $_POST['message_body'];
 $user = $_SESSION['userId'];
 

@@ -13,19 +13,19 @@
             <div class="col-md-4 col-sm-10 col-xs-12 form">
                
             <div>
-                <form  class="form-container" id="login">
+                <form  class="form-container" id="login" action="/action/login" method="POST">
                     <h1>LOGIN</h1>
                     <div class = "parent"> <label id = "info_login"></label> </div>
                     <label>Username:</label>
-                    <input name="username" type="text" class="form-control" placeholder="Username">
+                    <input name="username" id="username" type="text" class="form-control" placeholder="Username">
                     <label>Password:</label>
-                    <input name="password" type="password" class="form-control" placeholder="Password">
+                    <input name="password" id="password" type="password" class="form-control" placeholder="Password">
                     <button id="login_btn" type="submit" class="btn btn-block">Login</button>
                     <p>Don't have an account yet?  <button type="button" onclick="register()">Register</button> </p>
                 </form>
              
                
-                <form  class="form-container" id="register">
+                <form  class="form-container" id="register" method="POST" action="/action/login">
                     <h1>REGISTER</h1>
                     <div class = "parent"> <label id = "info_register"></label> </div>
                     <label>Username:</label>
