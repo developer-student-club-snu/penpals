@@ -23,7 +23,6 @@
 	$path = ltrim($path1[0], '/');
     $elem = explode('/', $path);
 
-    
 
     if($_SESSION["status"]) {
         require_once "frontend/Home.php";
