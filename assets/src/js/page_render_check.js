@@ -22,6 +22,7 @@ fetch('/action/menu_available')
 .then(response => response.text().then(response => {
     document.querySelector('#dropdown').style.display = response;
     document.querySelector('.convo_heading').style.display = response;
+    document.querySelector('#ref').style.display = response;
 }).catch(error => console.log(error))
 );
 
@@ -37,7 +38,7 @@ fetch('/action/greeting')
 }).catch(error => console.log(error))
 );
 
-document.querySelector('#refresh').addEventListener('click', e=> {
+document.querySelector('#ref').addEventListener('click', e=> {
     fetch('/action/display').then((res) => res.json())
     .then(response => {
         let output ="";
@@ -52,6 +53,4 @@ document.querySelector('#refresh').addEventListener('click', e=> {
         
     }).catch(error =>console.log(error));
 });
-
-
 

@@ -9,7 +9,7 @@ if(!isset($_POST) || !isset($_POST["username"])|| !isset($_POST["password"]) || 
     die();
 }
 
- 
+$_SESSION['username'] = $_POST['username']; 
 
 $username = md5($_POST["username"]);
 $salt = md5(time() . (rand() * 1000));
@@ -28,6 +28,11 @@ if(mysqli_num_rows($res) >= 1)
 //Creating a new user
 $sql = 'INSERT INTO users (username, salt, password) VALUES ("' . $username .'", "' . $salt . '", "' . $pass . '");';
 $conn->query($sql);
+
+$sql2 = 'SELECT * FROM  conversations where (user1 = "' . $user .'" OR user2 = "' . $user . '" ) AND status ="1"';
+$res2 = $conn->query($sql2);
+$res3 =mysqli_fetch_assoc($res2);
+$_SESSION['userId'] = $res4['id'];
 
 $_SESSION["status"] = true;
 

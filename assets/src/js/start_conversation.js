@@ -11,6 +11,7 @@ fetch('/action/menu_available')
     .then(response => response.text().then(response => {
         document.querySelector('#convo_heading').style.display = response;
         document.querySelector('#dropdown').style.display = response;
+        document.querySelector('#ref').style.display = response;
     }).catch(error => console.log(error))
     );
 

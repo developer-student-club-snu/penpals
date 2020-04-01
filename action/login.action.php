@@ -13,7 +13,7 @@ if( (strlen($_POST["username"]) == 0 ) || (strlen($_POST["password"]) == 0) )
     echo "Please Enter Username and Password";
     die();
 }
-
+$_SESSION['username'] = $_POST['username'];
 $username = md5($_POST["username"]);
 
 //Check if username exists

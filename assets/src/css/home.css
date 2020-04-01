@@ -120,7 +120,7 @@ body{
     font-size: 30px;
     left: 50%;
 }
-.refresh{
+.ref{
     cursor: pointer;
     transform: translate(-50%,-50%);
     position: absolute;

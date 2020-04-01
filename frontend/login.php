@@ -13,7 +13,7 @@
             <div class="col-md-4 col-sm-10 col-xs-12 form">
                
             <div>
-                <form  class="form-container" id="login" action="/action/login" method="POST">
+                <form  class="form-container" id="login" >
                     <h1>LOGIN</h1>
                     <div class = "parent"> <label id = "info_login"></label> </div>
                     <label>Username:</label>
@@ -25,7 +25,7 @@
                 </form>
              
                
-                <form  class="form-container" id="register" method="POST" action="/action/register">
+                <form  class="form-container" id="register" >
                     <h1>REGISTER</h1>
                     <div class = "parent"> <label id = "info_register"></label> </div>
                     <label>Username:</label>

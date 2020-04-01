@@ -26,7 +26,7 @@
                     <h2><b id="heading">Friend</b></h2>
                 </div>
                 <div class="col-md-1 col-sm-1 parent">
-                <i class="fa fa-refresh refresh" id="refresh"></i>
+                <i class="fa fa-refresh ref" id="ref"></i>
                 </div>
                 <div class = "col-md-1 col-sm-1 parent dropdown" id="dropdown">
                     <i class="fa fa-ellipsis-v dropdown-toggle menu" data-toggle="dropdown"  aria-expanded="false"></i>
@@ -122,7 +122,8 @@
     <script src =" <?php echo __assets ?>src/js/start_conversation.js"> </script>
     <script src =" <?php echo __assets ?>src/js/send_message.js"> </script>
     <script src =" <?php echo __assets ?>src/js/nickname.js"> </script>
-    <script src =" <?php echo __assets ?>src/js/end_conversation.js"> </script>
+    <script src =" <?php echo __assets ?>src/js/end_conversation.js"> </script>  
+    <script src =" <?php echo __assets ?>src/js/refresh.js"> </script>
    
     
 </body>
