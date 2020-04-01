@@ -21,9 +21,7 @@
 	$path = ltrim($path1[0], '/');
     $elem = explode('/', $path);
 
-    session_start();
-    $_SESSION['userID'] = '1';
-    $_SESSION['username'] = 'Moksh';
+    
 
     if(!empty($_SESSION["userId"])) {
         require_once "frontend/home.php";

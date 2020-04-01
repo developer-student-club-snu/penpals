@@ -22,7 +22,7 @@
        
         <div class="convo_area col-md-10 col-sm-12">
             <div class="convo_header" >
-                <div class="col-md-11 col-sm-11 convo_heading parent">
+                <div class="col-md-11 col-sm-11 convo_heading parent" id="convo_heading">
                     <h2><b id="heading">Friend</b></h2>
                 </div>
                 <div class = "col-md-1 col-sm-1 parent dropdown" id="dropdown">
@@ -65,7 +65,7 @@
                                 <div class="modal-body">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                     <label style="letter-spacing: 1px;">Are you sure you want to logout?</label><br>
-                                    <button type ="button" id="logout_btn" style="">Yes</button>
+                                    <button type ="button" id="logout_btn">Yes</button>
                                     <button type="button" data-dismiss="modal">No</button>
                               
                                     
@@ -101,11 +101,10 @@
 
             <form id="message_send">
                 <div class = "message_area">
-                
-                    <div class="col-md-11 parent">
+                    <div class="col-md-11 col-sm-11 parent">
                         <textarea class="textbox" placeholder="Type a Message" name="message_body"></textarea>
                     </div>
-                    <div class="col-md-1 parent">
+                    <div class="col-md-1 col-sm-1 parent">
                         <button class="send_btn" type = "submit"><img src="<?php echo __assets ?>image/send-icon.png" class="send_img"></button>
                     </div>  
                 </div>

@@ -98,9 +98,8 @@ body{
     font-size: 20px;
     border-radius: 20px;
     padding-left: 15px;
-    padding-right: 80px;
+    padding-right: 15px;
     padding-top:3px;
-    margin-left: 40px;
     transform: translate(-50%,-50%);
     top:50%;
 
@@ -180,24 +179,17 @@ body{
     border:none;
     background-color: transparent;
     color:white;
-    overflow: hidden;
-    height:35px;
-    width: 70px;
-    font-size:17px;
     position:absolute;
-    bottom:2%;
     -webkit-transition:0.5s;
     transition:0.5s;
     border-radius:20px;
-    right:58px;
+    left: 0%;
 }
 
 .send_img{
-    position:absolute;
     height:40px;
     width:50px;
-    left: 15px;
-    top: -1.1px;
+    
 }
 
 .chat{
@@ -206,9 +198,14 @@ body{
     overflow-wrap: break-word;
     overscroll-behavior-y: contain;
     scroll-snap-type: y mandatory;
-    scroll-snap-align: end;
-     
+    scroll-snap-align: end;    
+    font-size: 16px;
 }
+.chat p{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -241,6 +238,9 @@ body{
 .fa-ellipsis{
     position: relative;
     right: 2%;
+}
+.dropdown-menu{
+    margin-left: -75px;
 }
 .dropdown-menu a{
     color: black;
@@ -276,13 +276,15 @@ outline: none;
 }
 
 @media only screen and (max-width: 1024px){
+    body{
+        overflow: hidden;
+    }
     .chat_list {
         display: none;
     }
     .container{
         width: 95%;
         height: 95%;
-        top: 5%;
     }
     .convo_header h2{
         margin: 0;
@@ -295,8 +297,20 @@ outline: none;
     .menu{
         font-size: 60px;
     }
-    .chat h4{
-        font-size: 40px;
+    .dropdown-menu{
+        margin-left: -200px;
     }
-
-}
+    .chat p, .chat h4{
+        font-size: 34px;
+    }
+    .message_area{
+       height: 7%;
+    }
+    .textbox{
+        font-size: 45px;
+        height: 72px;
+    }
+    .send_img{
+        height:70px;
+        width:75px;
+    }

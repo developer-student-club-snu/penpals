@@ -43,6 +43,6 @@ $_SESSION["status"] = true;
 $_SESSION["userId"] = $res['id'];
 
 
-echo "Logged in";
+header("location: index.php");
 die();
 ?>
