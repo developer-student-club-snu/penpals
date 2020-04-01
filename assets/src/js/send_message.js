@@ -3,7 +3,6 @@ document.querySelector('#message_send').addEventListener('submit',e=>{
     let form = document.querySelector('#message_send');
     const data = new FormData(form);
 
-
     fetch('/action/send_message', {
         method: 'POST',
         body: data
