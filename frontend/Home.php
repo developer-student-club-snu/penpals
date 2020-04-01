@@ -22,8 +22,11 @@
        
         <div class="convo_area col-md-10 col-sm-12">
             <div class="convo_header" >
-                <div class="col-md-11 col-sm-11 convo_heading parent" id="convo_heading">
+                <div class="col-md-10 col-sm-10 convo_heading parent" id="convo_heading">
                     <h2><b id="heading">Friend</b></h2>
+                </div>
+                <div class="col-md-1 col-sm-1 parent">
+                <i class="fa fa-refresh refresh" id="refresh"></i>
                 </div>
                 <div class = "col-md-1 col-sm-1 parent dropdown" id="dropdown">
                     <i class="fa fa-ellipsis-v dropdown-toggle menu" data-toggle="dropdown"  aria-expanded="false"></i>
@@ -64,10 +67,11 @@
                             <div class="modal-content">
                                 <div class="modal-body">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <label style="letter-spacing: 1px;">Are you sure you want to logout?</label><br>
-                                    <button type ="button" id="logout_btn">Yes</button>
+                                <form method="POST" action="/action/logout">   
+                                <label style="letter-spacing: 1px;">Are you sure you want to logout?</label><br>
+                                    <button type ="submit" id="logout_btn">Yes</button>
                                     <button type="button" data-dismiss="modal">No</button>
-                              
+                                </form>
                                     
                                 </div>
                             </div>

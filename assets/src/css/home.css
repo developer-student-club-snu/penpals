@@ -120,6 +120,14 @@ body{
     font-size: 30px;
     left: 50%;
 }
+.refresh{
+    cursor: pointer;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top:50%;
+    font-size: 30px;
+    left: 100%;
+}
 .menu:hover{
     cursor: pointer;
 }
@@ -295,6 +303,9 @@ outline: none;
         height: 5%;
     }
     .menu{
+        font-size: 60px;
+    }
+    .refresh{
         font-size: 60px;
     }
     .dropdown-menu{

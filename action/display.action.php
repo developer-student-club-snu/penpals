@@ -21,6 +21,7 @@ else{
     $nickname = $res['nick1'];
 }
 
+
 $sql = 'SELECT * from messages where conversation = "'. $id .'";';
 $temp = $conn->query($sql);
 $result = mysqli_fetch_all($temp,MYSQLI_ASSOC);
