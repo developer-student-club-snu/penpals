@@ -4,16 +4,15 @@ $conn = \global_db\db_conn();
 //Checking for Length of Username and Password
 if(!isset($_POST) || !isset($_POST["username"])|| !isset($_POST["password"]) )
 {
-    echo "Please Enter Username and Password";
+    echo "{\"status\" : \"Please Enter Username and Password\"}";
     die();
 }
 
 if( (strlen($_POST["username"]) == 0 ) || (strlen($_POST["password"]) == 0) )
 {
-    echo "Please Enter Username and Password";
+    echo "{\"status\" : \"Please Enter Username and Password\"}";
     die();
 }
-$_SESSION['username'] = $_POST['username'];
 $username = md5($_POST["username"]);
 
 //Check if username exists
@@ -22,7 +21,7 @@ $res = $conn->query($sql1);
 
 if(mysqli_num_rows($res) < 1)
 {
-    echo "Username does not exist!";
+    echo "{\"status\" : \"Username does not exist!\"}";
     die();
 }
 
@@ -34,14 +33,16 @@ $pass = hash("sha256", $salt . $_POST["password"]);
 //Checking Password
 if ($pass != $password)
 {
-    echo "Password is Incorrect!";
+    echo "{\"status\" : \"Password is Incorrect!\"}";
     die();
 }
 
 $_SESSION["status"] = 'true';
 $_SESSION["userId"] = $res['id'];
+$_SESSION['username'] = $_POST['username'];
 
 
-header("location: /index.php");
+echo "{\"status\" : true}";
+
 die();
 ?>

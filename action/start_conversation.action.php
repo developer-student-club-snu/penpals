@@ -26,7 +26,7 @@ if(mysqli_num_rows($test) >= 1){
         if(mysqli_num_rows($check) >= 1)
         continue;
 
-        $sql3 = 'INSERT INTO conversations (user1, user2, status) VALUES ("' . $user .'","' . $partner .'","1");';
+        $sql3 = 'INSERT INTO conversations (user1, user2, status, nick1, nick2, encKey) VALUES ("' . $user .'","' . $partner .'",1, "","","");';
         $convo = $conn->query($sql3);
 
         $sql4 = 'UPDATE waitinglist SET status = "0" where user = "'. $partner .'"';
