@@ -21,12 +21,24 @@ else{
     $nickname = $res['nick1'];
 }
 
-
 $sql = 'SELECT * from messages where conversation = "'. $id .'";';
+$result = array();
 $temp = $conn->query($sql);
-$result = mysqli_fetch_all($temp,MYSQLI_ASSOC);
 
-
+while($a = mysqli_fetch_assoc($temp)){
+    if($a["sender"]==$_SESSION['userId']){
+        $a["sender"] = "You";
+    }
+    else{
+        if($nickname == ""){
+            $a["sender"] = "Friend";
+        }
+        else{
+            $a["sender"] = $nickname;
+        }
+    }
+    $result[] = $a;
+}
 
 exit(json_encode($result));
 
