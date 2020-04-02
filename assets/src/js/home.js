@@ -182,6 +182,13 @@ class ChatPage
             
         }).catch(error =>console.log(error));
     }
+
+    changeCongo = i => {
+        return (e) => {
+            this.state.openConvoId = i;
+            this.display();
+        }
+    }
 }
 
 const chatpage = new ChatPage();

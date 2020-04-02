@@ -121,6 +121,9 @@
     
    
     <script src =" <?php echo __assets ?>src/js/home.js"> </script>
+    <script>
+        console.log(`<?php print_r($_SESSION); ?>`);
+    </script>
    
     
 </body>

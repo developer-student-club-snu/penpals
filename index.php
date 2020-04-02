@@ -1,5 +1,7 @@
 <?php
 
+    error_reporting(E_ALL);
+
     ini_set('memory_limit', '-1');
 
     //OS Dependent Directory separator defined for use
@@ -23,7 +25,7 @@
     $elem = explode('/', $path);
 
 
-    if($_SESSION["status"]) {
+    if(isset($_SESSION["status"]) && $_SESSION["status"]) {
         require_once "frontend/Home.php";
     } else {
         require_once  "frontend/login.php";

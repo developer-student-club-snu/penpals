@@ -6,7 +6,10 @@ document.querySelector('#register').addEventListener('submit',e=>{
     fetch('action/register', {
         method: 'POST',
         body: data
-    }).then(response => response.text().then(response =>{
-        document.querySelector('#info_register').innerHTML = response;
+    }).then(response => response.json().then(response =>{
+        if(response.status !== true)
+        document.querySelector('#info_register').innerHTML = response.status;
+        else
+        window.location.href = "/index.php";
     }).catch(error => console.log(error)));
 });
