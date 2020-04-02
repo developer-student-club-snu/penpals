@@ -327,8 +327,8 @@ outline: none;
         display: none;
     }
     .container{
-        width: 95%;
-        height: 95%;
+       height : calc(100% - 10px);
+       width : calc(100% - 10px);
     }
     .convo_header h2{
         margin: 0;
@@ -339,10 +339,13 @@ outline: none;
         height: 80px;
     }
     .menu{
-        font-size: 60px;
+        font-size: 40px;
     }
     .refresh{
-        font-size: 60px;
+        font-size: 40px;
+    }
+    .ref{
+        left: calc(100% - 20px);
     }
     .dropdown-menu{
         margin-left: -200px;
@@ -355,7 +358,7 @@ outline: none;
     }
     .textbox{
         font-size: 20px;
-        height: 50px;
+        width: calc(100% - 15px)
     }
     .send_img{
         height:70px;

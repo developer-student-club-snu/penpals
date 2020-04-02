@@ -23,13 +23,13 @@
        
         <div class="convo_area col-md-10 col-sm-12">
             <div class="convo_header" >
-                <div class="col-md-10 col-sm-10 convo_heading parent" id="convo_heading">
+                <div class="col-md-10 col-sm-10 col-xs-10 convo_heading parent" id="convo_heading">
                     <h2><b id="heading">Friend</b></h2>
                 </div>
-                <div class="col-md-1 col-sm-1 parent">
+                <div class="col-md-1 col-sm-1 col-xs-1 parent">
                 <i class="fa fa-refresh ref" id="ref"></i>
                 </div>
-                <div class = "col-md-1 col-sm-1 parent dropdown" id="dropdown">
+                <div class = "col-md-1 col-sm-1 col-xs-1 parent dropdown" id="dropdown">
                     <i class="fa fa-ellipsis-v dropdown-toggle menu" data-toggle="dropdown"  aria-expanded="false"></i>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a type="button" class="btn dropdown-dropdown-content1" data-toggle="modal" data-target="#modal_nickname">Set Nickname</a>
@@ -63,10 +63,10 @@
 
             <form id="message_send">
                 <div class = "message_area">
-                    <div class="col-md-11 col-sm-11 parent">
+                    <div class="col-md-11 col-sm-5 col-xs-10 parent">
                         <textarea class="textbox" id="textbox" placeholder="Type a Message" name="message_body"></textarea>
                     </div>
-                    <div class="col-md-1 col-sm-1 parent">
+                    <div class="col-md-1 col-sm-1 col-xs-2 parent">
                         <button class="send_btn" type = "submit"><img src="<?php echo __assets ?>image/send-icon.png" class="send_img"></button>
                     </div>  
                 </div>
