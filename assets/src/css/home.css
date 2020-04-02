@@ -157,7 +157,30 @@ body{
     outline: none;
     background-color:#303030;  
 }
-.start:focus{
+.convo-listing{
+    font-size:20px;
+    font-family: Helvetica;
+    color:white;
+    background-color:#1a1a1a;
+    padding: 20px 10px;
+    text-align: left;
+    width:100%;
+    border:none;
+    -webkit-transition:0.6s;
+    transition:ease-in 0.6s;
+}
+.convo-listing:focus{
+    outline: none;
+}
+
+.convo-listing:hover{
+    outline: none;
+    background-color:#303030;  
+}
+.convo-listing:focus{
+    outline: none;
+}
+.convo-listing:focus{
     outline: none;
 }
 .end{

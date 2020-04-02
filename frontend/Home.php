@@ -11,13 +11,13 @@
     
         <div class="chat_list col-md-2 ">
             <div class="list_header">
-                <h3 id="greeting"></h3>
             </div>
             <div class="actions">
-                
+                <div id="conversations">
+                </div>
                 <button class="start" id="start" data-toggle="modal" data-target="#info"><i class="fa fa-plus"></i> </button>
             </div>
-                <button class="end" data-toggle = "modal" data-target="#logout">LOGOUT</button>
+                <button class="end" data-toggle="modal" data-target="#logout">LOGOUT</button>
         </div>
        
         <div class="convo_area col-md-10 col-sm-12">
@@ -120,12 +120,7 @@
                     </div>
     
    
-    <script src =" <?php echo __assets ?>src/js/page_render_check.js"> </script>
-    <script src =" <?php echo __assets ?>src/js/start_conversation.js"> </script>
-    <script src =" <?php echo __assets ?>src/js/send_message.js"> </script>
-    <script src =" <?php echo __assets ?>src/js/nickname.js"> </script>
-    <script src =" <?php echo __assets ?>src/js/end_conversation.js"> </script>  
-    <script src =" <?php echo __assets ?>src/js/refresh.js"> </script>
+    <script src =" <?php echo __assets ?>src/js/home.js"> </script>
    
     
 </body>
