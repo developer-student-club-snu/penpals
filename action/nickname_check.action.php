@@ -4,8 +4,11 @@ $conn = \global_db\db_conn();
  
 $user = $_SESSION['userId'];
 
+if(!isset($_GET["conv"]))
+die('{"status" : "No conversation id found}');
+
 //check if already in a conversation
-$sql = 'SELECT * FROM  conversations where (user1 = "' . $user .'" OR user2 = "' . $user . '" ) AND status ="1"';
+$sql = 'SELECT * FROM  conversations where (user1 = "' . $user .'" OR user2 = "' . $user . '" ) AND status ="1" AND id =' . $_GET["conv"];
 $res = $conn->query($sql);
 if(mysqli_num_rows($res)<1){
     die();

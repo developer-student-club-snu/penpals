@@ -32,18 +32,16 @@ body{
 }
 .list_header{
     background-color: #121212;
-    height:12%;
+    height: 150px;
     position: relative;
     text-align: center;
     overflow-wrap:break-word;
 }
-.list_header h3{
-    margin: 0;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    color: white;
+.list_header img{
+    display: block;
+    max-height: 100%;
+    max-width: 120px;
+    margin: 20px auto;
 }
 .logout_div{
     height : 12%;
@@ -132,7 +130,7 @@ body{
     cursor: pointer;
 }
 .actions{
-    height:76%;
+    height: calc(86% - 150px);
     text-align: center;
 }
 .start{
@@ -166,6 +164,11 @@ body{
     border:none;
     -webkit-transition:0.6s;
     transition:ease-in 0.6s;
+    font-weight: bold;
+}
+.convo-listing.open
+{
+    background-color:#303030; 
 }
 .convo-listing:focus{
     outline: none;
@@ -175,12 +178,7 @@ body{
     outline: none;
     background-color:#303030;  
 }
-.convo-listing:focus{
-    outline: none;
-}
-.convo-listing:focus{
-    outline: none;
-}
+
 .end{
     font-size:17px;
     font-family: Helvetica;
@@ -229,6 +227,7 @@ body{
     scroll-snap-type: y mandatory;
     scroll-snap-align: end;    
     font-size: 16px;
+    background-color: #E8EAF6;
 }
 .chat p{
     font-size: 20px;
@@ -256,13 +255,13 @@ body{
     padding: 15px 15px 15px 15px;
     margin: 10px;
     border-radius: 5px;
-    background-color: blue;
+    background-color: #BDBDBD;
 }
 
 .message.You
 {
     margin-left: 50px;
-    background-color: green;
+    background-color: #81C784;
 }
 
 .message:not(.You)

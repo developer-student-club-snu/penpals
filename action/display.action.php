@@ -2,10 +2,13 @@
 
 $conn = \global_db\db_conn();
 
+if(!isset($_GET["conv"]))
+die('{"status" : "No conversation id found}');
+
 $user = $_SESSION['userId'];
 
 //check if in a conversation
-$sql1 = 'SELECT * FROM  conversations where (user1 = "' . $user .'" OR user2 = "' . $user . '" ) AND status ="1"';
+$sql1 = 'SELECT * FROM  conversations where (user1 = "' . $user .'" OR user2 = "' . $user . '" ) AND status ="1" AND id =' . $_GET["conv"];
 $res = $conn->query($sql1);
 if(mysqli_num_rows($res)<1){
     echo "{}";
