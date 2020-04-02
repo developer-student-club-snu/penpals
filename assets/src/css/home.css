@@ -255,8 +255,23 @@ body{
 }
 
 .message{
-    margin: 15px 15px 15px 15px;
+    padding: 15px 15px 15px 15px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: blue;
 }
+
+.message.You
+{
+    margin-left: 50px;
+    background-color: green;
+}
+
+.message:not(.You)
+{
+    margin-right: 50px;
+}
+
 #waitlist{
     font-weight: bold;
     font-size: 24px;

@@ -37,8 +37,7 @@ class ChatPage
         .then(response => {
             let output ="";
             for(let i in response){
-                output += `<div class="message">
-                <h4><b>${response[i].sender}:</b></h4>
+                output += `<div class="message ${response[i].sender}">
                 <p>${response[i].content}<p>
                 </div>
                 `
@@ -181,6 +180,13 @@ class ChatPage
             }
             
         }).catch(error =>console.log(error));
+    }
+
+    changeCongo = i => {
+        return (e) => {
+            this.state.openConvoId = i;
+            this.display();
+        }
     }
 }
 
