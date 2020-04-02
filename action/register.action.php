@@ -36,7 +36,5 @@ $_SESSION['userId'] = $res4['id'];
 
 $_SESSION["status"] = true;
 
-{
     header("location : /index.php");
     die();
-}

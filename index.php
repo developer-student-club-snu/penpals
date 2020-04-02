@@ -14,7 +14,6 @@
     
     session_start();
 
-
 	include_once "core" . DS . "routeHandler.php";
 
 	$linkPre = explode("/", $GLOBALS['subFol']);

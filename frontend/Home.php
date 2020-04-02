@@ -34,7 +34,47 @@
                         <a type="button" class="btn dropdown-dropdown-content1" data-toggle="modal" data-target="#modal_nickname">Set Nickname</a>
                         <a type="button" class="btn dropdown-dropdown-content1" data-toggle="modal" data-target="#end_convo">End Conversation</a>     
                     </div>
-                    <div id="info" class="modal fade" role="dialog">
+                    
+                    <div id="end_convo"  class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </form>  
+                                <label style="letter-spacing: 1px;">Are you sure you want to end the conversation?</label><br>
+                                    <button type ="submit" data-dismiss="modal" id ="end" style="">Yes</button>
+                                    <button type="button" data-dismiss="modal">No</button>
+                                </form>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                                     
+                </div>
+            </div>
+
+            <div class="chat parent col-md-12" id="chat">
+                            
+            </div>
+            
+
+            <form id="message_send">
+                <div class = "message_area">
+                    <div class="col-md-11 col-sm-11 parent">
+                        <textarea class="textbox" id="textbox" placeholder="Type a Message" name="message_body"></textarea>
+                    </div>
+                    <div class="col-md-1 col-sm-1 parent">
+                        <button class="send_btn" type = "submit"><img src="<?php echo __assets ?>image/send-icon.png" class="send_img"></button>
+                    </div>  
+                </div>
+            </form>
+        </div>
+    
+    </div>
+
+    <div id="info" class="modal fade" role="dialog">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body"> 
@@ -78,44 +118,6 @@
 
                         </div>
                     </div>
-                    <div id="end_convo"  class="modal fade" role="dialog">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                </form>  
-                                <label style="letter-spacing: 1px;">Are you sure you want to end the conversation?</label><br>
-                                    <button type ="submit" data-dismiss="modal" id ="end" style="">Yes</button>
-                                    <button type="button" data-dismiss="modal">No</button>
-                                </form>
-                                    
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                                     
-                </div>
-            </div>
-
-            <div class="chat parent col-md-12" id="chat">
-                            
-            </div>
-            
-
-            <form id="message_send">
-                <div class = "message_area">
-                    <div class="col-md-11 col-sm-11 parent">
-                        <textarea class="textbox" placeholder="Type a Message" name="message_body"></textarea>
-                    </div>
-                    <div class="col-md-1 col-sm-1 parent">
-                        <button class="send_btn" type = "submit"><img src="<?php echo __assets ?>image/send-icon.png" class="send_img"></button>
-                    </div>  
-                </div>
-            </form>
-        </div>
-    
-    </div>
     
    
     <script src =" <?php echo __assets ?>src/js/page_render_check.js"> </script>

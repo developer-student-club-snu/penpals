@@ -38,7 +38,7 @@ if ($pass != $password)
     die();
 }
 
-$_SESSION["status"] = true;
+$_SESSION["status"] = 'true';
 $_SESSION["userId"] = $res['id'];
 
 
