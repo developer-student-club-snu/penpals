@@ -3,12 +3,15 @@ class ChatPage
     state = {
         conversations: [], //Conversations retrieved from server
         openConvoId: 0, //The conversation open right now.
+        starters: []
     }
 
-    init = () => {
+    init = async () => {
         this.checkWaitList();
         this.menuAvailable();
+        await this.getStarters();
         this.getConvos();
+        this.autoReload();
 
         this.bind();
     }
@@ -19,6 +22,7 @@ class ChatPage
         document.querySelector('#message_send').addEventListener('submit', this.sendMessage);
         document.querySelector('#nickname').addEventListener('submit', this.getNickName);
         document.querySelector("#end").addEventListener('click', this.endConversation);
+        document.querySelectorAll(".phone-menu-button").forEach(e => e.addEventListener('click', this.toggleMenu));
     }
 
     checkWaitList = () => {
@@ -30,19 +34,32 @@ class ChatPage
     }
 
     display = () => {
+        if(document.getElementById("ref").classList.contains("loading"))
+        return;
+        document.getElementById("ref").classList.add("loading");
         const { conversations, openConvoId } = this.state;
+        if(conversations.length == 0)
+        return;
         fetch('/action/display?conv='+conversations[openConvoId].convId).then((res) => res.json())
         .then(response => {
             let output ="";
-            for(let i in response){
-                output += `
-        <p class="message ${response[i].sender}">${response[i].content}<p>
-        `
+            if(response.length > 0)
+                for(let i in response)
+                    output += `<p class="message ${response[i].sender}">${response[i].content}<p>`;
+            else
+            {
+                let suggestion = this.state.starters[Math.round(Math.random() * (this.state.starters.length - 1))];
+                output = `
+                    <div class="starters">
+                        <h2>Here's something you could send:</h2>
+                        <p>"${suggestion}"</p>
+                    </div>
+                `;
             }
             document.querySelector('#chat').innerHTML = output;
             var objDiv = document.getElementById("chat");
             objDiv.scrollTop = objDiv.scrollHeight;
-            
+            document.getElementById("ref").classList.remove("loading");
         }).catch(error =>console.log(error));
     }
 
@@ -58,6 +75,8 @@ class ChatPage
 
     nickNameCheck = () => {
         const { conversations, openConvoId } = this.state;
+        if(conversations.length == 0)
+        return;
         fetch('/action/nickname_check?conv='+conversations[openConvoId].convId)
         .then(response => response.text().then(response => {
             document.querySelector("#heading").innerHTML = response;
@@ -69,30 +88,32 @@ class ChatPage
         fetch('/action/start_conversation')
         .then(response => response.text().then(response => {
             document.querySelector('#waitlist').innerHTML = response;
+            this.menuAvailable();
+            this.nickNameCheck();
+            this.getConvos();
         }).catch(error => console.log(error)));
-        
-        this.menuAvailable();
-        this.nickNameCheck();
-        this.getConvos();
     }
 
     sendMessage = e => {
         const { conversations, openConvoId } = this.state;
         e.preventDefault();
+        document.querySelector("button.send_btn").setAttribute("disabled", true);
         let form = document.querySelector('#message_send');
         const data = new FormData(form);
+        let msg = document.querySelector("#textbox").value;
+        document.querySelector("#textbox").value = "";
 
         fetch('/action/send_message?conv='+conversations[openConvoId].convId, {
             method: 'POST',
             body: data
         }).then(response => response.text().then(response =>{
             if(response){
-            $("#info").modal('show');
-            document.querySelector("#waitlist").innerHTML= response;}
-            else{
-                document.querySelector("#textbox").value = "";
+                $("#info").modal('show');
+                document.querySelector("#waitlist").innerHTML= response;
+                document.querySelector("#textbox").value = msg;
             }
             this.display();
+            document.querySelector("button.send_btn").removeAttribute("disabled");
         }).catch(error => console.log(error) && this.display()));
     }
 
@@ -146,6 +167,8 @@ class ChatPage
                 createButton.classList.add("convo-listing");
                 createButton.innerHTML = response[i].nickname.length > 0 ? response[i].nickname : "Pal #" + i;
                 createButton.onclick = (e) => this.changeCongo(i)(e);
+                if(i == this.state.openConvoId)
+                createButton.classList.add("open");
 
                 document.getElementById('conversations').appendChild(createButton);
                 
@@ -154,7 +177,8 @@ class ChatPage
             }
             this.display();
             this.nickNameCheck();
-            
+            if(this.state.conversations.length == 0)
+            document.querySelector("body").classList.add("menuOpen");
         }).catch(error =>console.log(error));
     }
 
@@ -165,7 +189,35 @@ class ChatPage
             this.state.openConvoId = i;
             this.display();
             this.nickNameCheck();
+            this.toggleMenu();
         }
+    }
+
+    getStarters = async () => {
+        try{
+            const response = await fetch("/assets/src/starters.json");
+            const respArr = await response.json();
+            this.state.starters = [...respArr];
+        }
+        catch(e)
+        {
+            console.log(e);
+        }
+    }
+
+    autoReload = async () => {
+        setInterval(
+            () => {
+                this.display();
+            }
+        , 10000);
+    }
+
+    toggleMenu = () => {
+        if(document.querySelector("body").classList.contains("menuOpen"))
+        document.querySelector("body").classList.remove("menuOpen");
+        else
+        document.querySelector("body").classList.add("menuOpen");
     }
 }
 

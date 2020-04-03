@@ -7,7 +7,7 @@ RewriteEngine on
   </IfModule>
 </FilesMatch>
 
-RewriteRule ^(assets|15) - [L]
+RewriteRule ^(assets|15|favicon.ico) - [L]
 RewriteRule ^plugins/[a-zA-Z0-9_]+/assets/.+\.(svg|jpg|jpeg|css|js|png|ico)$ - [L]
 RewriteRule ^themes/[a-zA-Z0-9_]+/assets/.+\.(svg|jpg|jpeg|css|js|png|ico)$ - [L]
 RewriteRule ^action action.php [QSA,L]

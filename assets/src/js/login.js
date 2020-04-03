@@ -8,7 +8,7 @@ document.querySelector('#login').addEventListener('submit',e=>{
         body: data
     }).then(response => response.json().then(response =>{
         if(response.status != true)
-        document.querySelector('#info_login').innerHTML = response;
+        document.querySelector('#info_login').innerHTML = response.status;
         else
         window.location.href = "/index.php";
     }).catch(error => console.log(error)));
