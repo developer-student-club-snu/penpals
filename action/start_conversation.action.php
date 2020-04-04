@@ -49,7 +49,7 @@ if(mysqli_num_rows($test) >= 1)
 //Insert in the waitlist table
 $sql2 = 'INSERT INTO waitinglist (user, status) VALUES ("' . $user .'","1");';
 $res = $conn->query($sql2);
-echo "Waitlisted! You will be econnected when a new person is available!";
+echo "Waitlisted! You will be connected when a new person is available!";
 exit();
 
 ?>
