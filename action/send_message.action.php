@@ -4,13 +4,6 @@ $conn = \global_db\db_conn();
 if(!isset($_GET["conv"]))
 die('{"status" : "No conversation id found}');
 
-//Check if message has been entered
-if(!isset($_POST) || !isset($_POST["message_body"]) || strlen(($_POST["message_body"]))<100)
-{
-    echo "Message should be atleast 100 characters long";
-    die();
-}
-
 $message = $_POST['message_body'];
 $user = $_SESSION['userId'];
 

@@ -20,6 +20,7 @@
                 <button class="start" id="start" data-toggle="modal" data-target="#info"><i class="fa fa-plus"></i> </button>
             </div>
                 <button class="end" data-toggle="modal" data-target="#logout">LOGOUT</button>
+            <span class="phone-menu-button"><i class="fa fa-bars"></i></span>
         </div>
        
         <div class="convo_area col-md-10 col-sm-12">
@@ -55,6 +56,7 @@
                     </div>
                                      
                 </div>
+                <span class="phone-menu-button"><i class="fa fa-bars"></i></span>
             </div>
 
             <div class="chat parent col-md-12" id="chat">
@@ -96,7 +98,7 @@
                                 <form id = "nickname" >
                                     <label>Set Nickname:</label>
                                     <input name= "nick" placeholder = "Enter Nickname"></input>
-                                    <button type ="submit"  >Submit</button>
+                                    <button type ="submit" >Submit</button>
                                 </form>
                                     
                                 </div>
@@ -123,10 +125,5 @@
     
    
     <script src =" <?php echo __assets ?>src/js/home.js"> </script>
-    <script>
-        console.log(`<?php print_r($_SESSION); ?>`);
-    </script>
-   
-    
 </body>
 </html>

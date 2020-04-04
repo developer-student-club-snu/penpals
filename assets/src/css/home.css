@@ -1,3 +1,22 @@
+@keyframes loader
+{
+    0%
+    {
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+
+    50%
+    {
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+
+    99%
+    {
+        transform: translate(-50%,-50%) rotate(719deg);
+        
+    }
+}
+
 body{
     background-color: #465669;
 }
@@ -25,6 +44,27 @@ body{
     position: relative;
 }
 
+.starters
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    max-width: calc(100% - 150px);
+}
+
+.starters h2
+{
+    font-size: 22px;
+}
+
+.starters p
+{
+    font-size: 16px;
+}
+
 .convo_area{
     background-color: #d9d9d9;
     height: 100%;
@@ -35,7 +75,7 @@ body{
     height: 150px;
     position: relative;
     text-align: center;
-    overflow-wrap:break-word;
+    overflow: hidden;
 }
 .list_header img{
     display: block;
@@ -62,6 +102,7 @@ body{
     background-color: #c1bebe;
     height:12%;
     position: relative;
+    box-shadow: 0px 10px 16px -6px rgba(0,0,0,0.52);
 }
 .convo_heading{
     height:100%;
@@ -73,6 +114,16 @@ body{
     transform: translateY(-50%);
     position: absolute;
     padding-left: 10px;
+}
+
+.phone-menu-button
+{
+    font-size: 30px;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    position: absolute;
+    display: none;
 }
 
 .message_area{
@@ -117,14 +168,24 @@ body{
     top:50%;
     font-size: 30px;
     left: 50%;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
 }
 .ref{
     cursor: pointer;
     transform: translate(-50%,-50%);
     position: absolute;
+    display: inline-block;
     top:50%;
     font-size: 30px;
+    height: 30px;
+    width: 30px;
     left: 100%;
+}
+#ref.loading
+{
+    animation: loader 3s infinite;
 }
 .menu:hover{
     cursor: pointer;
@@ -228,6 +289,7 @@ body{
     scroll-snap-align: end;    
     font-size: 16px;
     background-color: #E8EAF6;
+    position: relative;
 }
 .chat p{
     font-size: 20px;
@@ -332,7 +394,7 @@ outline: none;
     .convo_header h2{
         margin: 0;
         font-size: 30px;
-        
+        margin-left: 30px;
     }
     .convo_header{
         height: 80px;
@@ -365,15 +427,30 @@ outline: none;
     }
     #heading
     {
-        font-size: 30px;
+        font-size: 20px;
     }
     .message p
     {
         font-size: 20px;
     }
+    .phone-menu-button
+    {
+        display: inline-block;
+        cursor: pointer;
+    }
+    .chat_list .phone-menu-button
+    {
+        top: 80px;
+        left: 20px;
+        color: white;
+    }
     .send_btn img
     {
         height: 30px;
         width: 35px;
+    }
+    body.menuOpen .chat_list
+    {
+        display: block;
     }
 }
