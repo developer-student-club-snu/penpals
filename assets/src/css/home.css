@@ -18,7 +18,7 @@
 }
 
 body{
-    background-color: #465669;
+    background-color: wheat;
 }
 
 .container{
@@ -29,16 +29,18 @@ body{
 	top:0;
 	bottom: 0;
 	left: 0;
-    box-shadow: 30px 20px 50px 0px #202529;
+    box-shadow: 7px 7px 15px wheat;
 	right: 0;
     margin: auto;
     padding: 0px;
-    box-shadow: black;
+    box-shadow: 7px 7px 12px rgb(150, 125, 80);
+    border-radius: 2rem;
+    overflow: hidden;
 
 }
 
 .chat_list{
-    background-color: #1a1a1a;
+    background-color: teal;
     height: 100%;
     padding: 0px;
     position: relative;
@@ -71,8 +73,8 @@ body{
     padding: 0px;
 }
 .list_header{
-    background-color: #121212;
-    height: 150px;
+    background-color: rgb(1, 75, 75);
+    height:12%;
     position: relative;
     text-align: center;
     overflow: hidden;
@@ -99,7 +101,7 @@ body{
     transform: translate(-50%,-50%);
 }
 .convo_header{
-    background-color: #c1bebe;
+    background-color: teal;
     height:12%;
     position: relative;
     box-shadow: 0px 10px 16px -6px rgba(0,0,0,0.52);
@@ -131,7 +133,7 @@ body{
     width: 100%;
     position: absolute;
     bottom: 0px;
-    background-color: #c1bebe;
+    background-color: rgb(1, 75, 75);
     text-align: center;
 }
 .parent{
@@ -199,7 +201,7 @@ body{
     font-family: Helvetica;
     left:0;
     color:white;
-    background-color:#1a1a1a;
+    background-color:teal;
     height:60px;
     width:100%;
     border:none;
@@ -212,15 +214,15 @@ body{
 
 .start:hover{
     outline: none;
-    background-color:#303030;  
+    background-color:rgb(1, 75, 75);  
 }
 .convo-listing{
     font-size:20px;
     font-family: Helvetica;
     color:white;
-    background-color:#1a1a1a;
+    background-color:rgb(1, 75, 75);
     padding: 20px 10px;
-    text-align: left;
+    text-align: center;
     width:100%;
     border:none;
     -webkit-transition:0.6s;
@@ -229,7 +231,7 @@ body{
 }
 .convo-listing.open
 {
-    background-color:#303030; 
+    background-color:teal; 
 }
 .convo-listing:focus{
     outline: none;
@@ -237,7 +239,7 @@ body{
 
 .convo-listing:hover{
     outline: none;
-    background-color:#303030;  
+    background-color:rgb(1, 75, 75);  
 }
 
 .end{
@@ -246,16 +248,17 @@ body{
     position:absolute;
     left:0;
     color:white;
-    background-color:#1a1a1a;
+    background-color:teal;
     height:60px;
     width:100%;
+    margin: 0 auto;
     border:none;
     -webkit-transition:0.6s;
     transition:ease-in 0.6s;
 }
 .end:hover{
     outline: none;
-    background-color:#303030;   
+    background-color:rgb(1, 75, 75);   
 }
 .end:focus{
     outline: none;
@@ -265,13 +268,13 @@ body{
 }
 .send_btn{
     border:none;
-    background-color: transparent;
+    background-color: white;
     color:white;
     position:absolute;
     -webkit-transition:0.5s;
     transition:0.5s;
     border-radius:20px;
-    left: 0%;
+    right: 20%;
 }
 
 .send_img{
@@ -288,7 +291,7 @@ body{
     scroll-snap-type: y mandatory;
     scroll-snap-align: end;    
     font-size: 16px;
-    background-color: #E8EAF6;
+    background-color: whitesmoke;
     position: relative;
 }
 .chat p{
