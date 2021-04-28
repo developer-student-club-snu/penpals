@@ -12,6 +12,7 @@
     <div class="container">
         <div class="chat_list col-md-2 ">
             <div class="list_header">
+                <img src="/assets/image/penpals_logo.png">
             </div>
             <div class="actions">
                 <div id="conversations">
